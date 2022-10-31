@@ -1,2 +1,2 @@
 # shopify_admin
-Partie admin du site shopify fait avec React js
+Partie front du site shoes fait avec React js
