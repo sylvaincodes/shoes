@@ -1,0 +1,32 @@
+/* ---------------------------
+    - NAVBAR
+-----------------------------*/
+
+.navbar-top{
+    background: var(--white);
+    box-shadow: var(--shadow);
+    margin-top: 55px;
+}
+
+.navbar-top .container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding-inline: 20px;
+   padding-block: 10px;
+   height: 60px;
+}
+
+.navbar-top .container .icon{
+   font-size: var(--fs-5);
+}
+
+.navbar-top .logo-text{
+    font-family: var(--ff-astral);
+    color: var(--black);
+    font-size: var(--fs-5);
+    font-weight: bold;
+}
+
+

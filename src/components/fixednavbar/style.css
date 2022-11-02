@@ -1,0 +1,50 @@
+/* ---------------------------
+    - NAVBAR FIXED
+-----------------------------*/
+
+.navbar{
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.navbar .container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding-inline: 20px;
+   padding-block: 10px;
+   height: 60px;
+}
+
+.navbar .container .icon{
+   font-size: var(--fs-5);
+}
+
+.navbar .logo-text{
+    font-family: var(--ff-astral);
+    color: var(--black);
+    font-size: var(--fs-5);
+    font-weight: bold;
+}
+
+.navbar.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    height: auto;
+    width: 100%;
+    z-index: 100;
+    visibility: hidden;
+    /* padding-block-start: 10px; */
+    transform: translateY(30px);
+}
+
+.navbar.show{
+    visibility: visible;
+    transform: translate(0);
+    transition: 1s ease;
+    /* animation: moveFromTop 500ms ease; */
+}
+
