@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Recoleta';
   src: local('Recoleta Light'), local('Recoleta-Light'),
-    url('./recoleta/Recoleta-Light.woff2') format('woff2');
+      url('./recoleta/Recoleta-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 @font-face {
   font-family: 'Recoleta';
   src: local('Recoleta Regular'), local('Recoleta-Regular'),
-    url('./recoleta/Recoleta-Regular.woff2') format('woff2');
+      url('./recoleta/Recoleta-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 @font-face {
   font-family: 'Gordita';
   src: local('Gordita Light'), local('Gordita-Light'),
-    url('./gordita/Gordita-Light.woff2') format('woff2');
+      url('./gordita/Gordita-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 @font-face {
   font-family: 'Gordita';
   src: local('Gordita Regular'), local('Gordita-Regular'),
-    url('./gordita/Gordita-Regular.woff2') format('woff2');
+      url('./gordita/Gordita-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -57,7 +57,7 @@
 @font-face {
   font-family: 'Gordita';
   src: local('Gordita Italic'), local('Gordita-Italic'),
-    url('./gordita/Gordita-Italic.woff2') format('woff2');
+      url('./gordita/Gordita-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -66,46 +66,8 @@
 @font-face {
   font-family: 'Gordita';
   src: local('Gordita Medium'), local('Gordita-Medium'),
-    url('./gordita/Gordita-Medium.woff2') format('woff2');
+      url('./gordita/Gordita-Medium.woff2') format('woff2');
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-/**
- * ASTRAL FONT
- */
-
-@font-face {
-  font-family: 'Astral';
-  src: local('Astral Light'), local('Astral-Light'),
-    url('./astral/Astral-Light.ttf') format('ttf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-/**
- * INTENSE FONT
- */
-
-@font-face {
-  font-family: 'Intense';
-  src: local('Intense Light'), local('Intense-Light'),
-    url('./intense/Intense-Light.otf') format('otf');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Intense';
-  src: local('Intense Regular'), local('Intense-Regular'),
-    url('./intense/Intense-Regular.ttf') format('ttf');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }

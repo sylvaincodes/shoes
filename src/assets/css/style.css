@@ -4,115 +4,274 @@
 Build by Sylvain adande 
 ------------------------- */
 
+/*--------------------------*/
+/*  ANIMATION FOR WEBSITE
+/*------------------------*/
+
+@keyframes rotate {
+    0% { transform: rotate(45deg);}
+    100% { transform: rotate(180deg);  }
+}
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4); }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+}
+
+
+
+@keyframes left_to_right {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right_to_left {
+    from {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+@keyframes opacity {
+    
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }  
+    
+    50% {
+        opacity: 0.5;
+    } 
+    
+    75% {
+        opacity: 0.75;
+    }    
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes decale {
+    from {
+        opacity: 7;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes moveFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+  @keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+  }
+  
+  @keyframes rotateX {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    50% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+  }
+
 /* ------------------------
     - RESET CSS
 --------------------------*/
 
-@import url('./animations.css');
 
-html{
-    font-family: var(--ff-gordita) , var(--ff-recoleta);
-    font-size: 10px;
-    scroll-behavior: smooth;
-    cursor: pointer;
+html {
+  font-family: var(--ff-gordita), var(--ff-recoleta);
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
 
-body{
-    background: var(--white);
-    font-size: 1rem;
-    font-weight: var(--fw-400);
-    line-height: 1.5;
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
-    color: var(--black);
+body {
+  background: var(--white);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  color: var(--black);
+  animation: opacity 1s ease;
 }
 
 *,
 ::after,
-::before{
-    margin:0;
-    padding:0;
-    box-sizing:border-box
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--white);
+  background: var(--white);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--jet-2);
+  background: var(--jet-2);
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.text-link{
-    text-decoration: underline;
-        color: var(--black);
+.text-link {
+  text-decoration: underline;
+  color: var(--black);
 }
 
-img{
-    height: auto;
-}
-
-
-button{
-    background: none;
-    border: none;
-}
-
-em,strong,a{
-    color: var(--white);
+img {
+  height: auto;
 }
 
 
-h1{
-    color: var(--black);
-    font-size: var(--fs-1);
+button {
+  background: none;
+  border: none;
 }
 
-h2{
-    color: var(--black);
-    font-size: var(--fs-2);
+em,
+strong,
+a {
+  color: var(--black);
 }
 
-h3{
-    color: var(--black);
-    font-size: var(--fs-3);
-}
-h4{
-    color: var(--black);
-    font-size: var(--fs-4);
-}
-h5{
-    color: var(--black);
-    font-size: var(--fs-5);
-}
-h6{
-    color: var(--black);
-    font-size: var(--fs-6);
+
+h1 {
+  color: var(--black);
+  font-size: var(--fs-1);
 }
 
+h2 {
+  color: var(--black);
+  font-size: var(--fs-2);
+}
+
+h3 {
+  color: var(--black);
+  font-size: var(--fs-3);
+}
+
+h4 {
+  color: var(--black);
+  font-size: var(--fs-4);
+}
+
+h5 {
+  color: var(--black);
+  font-size: var(--fs-5);
+}
+
+h6 {
+  color: var(--black);
+  font-size: var(--fs-6);
+}
+
+.show{
+    display:block;
+    animatoin: show .5s ease;
+}
+
+.hide{
+    display:none;
+}
+
+.white{
+    color:var(--white) !important;
+}
 
 /* ------------------------
     - CUSTOM CSS
 --------------------------*/
 
-:root{
+:root {
 
 
-     /* 
+    /* 
         * COULEURS PRINCIPALES
     */
 
@@ -137,12 +296,13 @@ h6{
     --white_a75: hsla(0, 0%, 100%, 0.75);
     --white_a80: hsla(0, 0%, 100%, 0.8);
     --white_a100: #f2f2f2;
+    --white_a110: rgb(245, 245, 245);
     --silver: #cecdcd;
     --jet-1: hsl(0, 0%, 20%);
     --jet-2: hsl(0, 0%, 16%);
     --jet-3: rgb(60, 49, 63);
     --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --black: rgb(33, 42, 47);
 
 
 
@@ -167,16 +327,16 @@ h6{
         * SIZES
     */
 
-    --fs-1 : 7rem;
-    --fs-2 : 6rem;
-    --fs-3 : 5rem;
-    --fs-4 : 4rem;
-    --fs-5 : 3rem;
-    --fs-6 : 2rem;
-    --fs-7 : 1.5rem;
-    --fs-8 : 1.2rem;
+    --fs-1: 7rem;
+    --fs-2: 6rem;
+    --fs-3: 5rem;
+    --fs-4: 4rem;
+    --fs-5: 3rem;
+    --fs-6: 2rem;
+    --fs-7: 1.5rem;
+    --fs-8: 1.2rem;
 
-       /* 
+    /* 
         * WEIGHT
     */
 
@@ -197,11 +357,21 @@ h6{
         * SPACING
     */
 
-    --section-padding: 20px;
-    --block-padding: 10px;
-    --inline-padding: 10px;
-    --width: 1;
-    --height: 1;
+    --section-padding: 40px;
+    --padding-block-5: 5px;
+    --padding-block-10: 10px;
+    --padding-block-20: 20px;
+    --padding-block-25: 25px;
+    --padding-block-30: 30px;
+    --padding-block-40: 40px;  
+    
+    --padding-inline-5: 5px;
+    --padding-inline-10: 10px;
+    --padding-inline-20: 20px;
+    --padding-inline-25: 25px;
+    --padding-inline-30: 30px;
+    --padding-inline-40: 40px;
+
 
     /* 
         * BORDER RADIUS
@@ -228,24 +398,22 @@ h6{
     - REUSED CSS
 --------------------------*/
 
-.container{
-    
-}
+.container {}
 
-.cover{
+.cover {
     object-fit: cover;
-    height: 300px;
+    height: inherit;
     width: 100%;
 }
 
-.btn{
+.btn {
     background: var(--white);
     color: var(--black);
     padding: 15px;
 }
 
 
-.btn-black{
+.btn-black {
     background-color: var(--black);
     color: var(--white);
     width: 100%;
@@ -254,29 +422,30 @@ h6{
     margin-block: 10px;
     text-transform: uppercase;
     font-weight: var(--fw-500);
- }
+}
 
- .text-content::first-letter{
+.text-content::first-letter {
     text-transform: uppercase;
- }
- 
+}
 
-.btn:is(:hover,:focus-visible){
+
+.btn:is(:hover, :focus-visible) {
     /* background: var(--smokey-black); */
 }
 
-.btn:is(:hover,:focus-visible) a {
+.btn:is(:hover, :focus-visible) a {
     color: var(--white);
 }
 
 
-.animated{
+.animated {
     position: relative;
     background: var(--white);
     z-index: 100;
+    transition:  1s ease;
 }
 
-.animated:after{
+.animated:after {
     content: '';
     position: absolute;
     background: var(--dark-black);
@@ -289,7 +458,7 @@ h6{
     z-index: -1;
 }
 
-.animated:hover::after{
+.animated:hover::after {
     width: 100%;
 }
 
@@ -309,4 +478,95 @@ h6{
     content: '';
     position: absolute;
     background: var(--gradient-1);
+}
+
+.fly-item{
+   position: absolute;
+   top: 0;
+   right: -0;
+   background: var(--first-color);
+   z-index: 100;
+   width: 150px;
+   padding-inline: 10px;
+   padding-block: 5px;
+   color: var(--black);
+   font-size: var(--fs-6);
+   border-bottom-left-radius: 25px;
+   border-top-left-radius: 25px;
+   font-weight: var(--fw-300);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+
+/*
+    * DAT REVEAL
+*/
+
+[data-reveal]{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: var(--transition-2);
+}
+
+[data-reveal="left"]{
+    transform: translateX(-50px);
+}
+
+[data-reveal="right"]{
+    transform: translateX(50px);
+}
+
+[data-reveal].revealed {
+    transform: translate(0);
+    opacity: 1;
+}
+
+
+
+
+/* -------------------------
+    - RESPONSIVE
+-------------------------- */
+
+
+/* ---------------------
+    - MEDIA QUERY LARGER THAN 575
+----------------------*/
+
+@media (min-width: 575px) {
+
+    .btn-black{
+    }
+}
+
+
+/* ---------------------
+    - MEDIA QUERY LARGER THAN 992
+----------------------*/
+
+@media (min-width: 992px) {
+
+        :root{
+
+        /* 
+            * SIZES
+        */
+        --fs-1: 7.5rem;
+        --fs-2: 6.5rem;
+        --fs-3: 5.5rem;
+        --fs-4: 4.5rem;
+        --fs-5: 3.5rem;
+        --fs-6: 2.5rem;
+        --fs-7: 2rem;
+        --fs-8: 1.7rem;
+        }
+
 }
