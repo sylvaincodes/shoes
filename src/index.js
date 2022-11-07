@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+
 import './assets/fonts/font.css'
 import './assets/css/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <React.StrictMode> {/* on passe le theme.js a notre style component */}
-      <App/>
-    </React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
