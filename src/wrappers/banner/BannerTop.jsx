@@ -5,7 +5,6 @@ import './style.css';
 
 export const BannerTop = () => {
 
-    console.log(bannerTopData);
     return (
         <div className="banner-top">
             <div className="container">

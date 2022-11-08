@@ -1,11 +1,14 @@
 import { combineReducers } from "redux"
 import { createMultilanguageReducer } from 'redux-multilanguage'
+import { currencyReducer } from "./currencyReducer";
 
 const rootReducer = combineReducers({
-    // Configurer multi langues
+    
+    //Reducer de multilanguage
     multilanguage: createMultilanguageReducer({currentLanguageCode: 'fr'}),
 
-    //importer les reducers ici
+    //Importer les reducers ici
+    currencyData: currencyReducer,
 
 });
 
