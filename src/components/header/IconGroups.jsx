@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 import { TbUserCircle } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
-import { RiMenuFoldLine } from "react-icons/ri";
+import { RiMenu4Fill } from "react-icons/ri";
 
 
 export const IconGroups = ({setIsNavMobileOpen}) => {
@@ -59,7 +59,7 @@ export const IconGroups = ({setIsNavMobileOpen}) => {
 
       <div className="icon mobile-menu-btn">
         <button onClick={  ()  => triggerMobileMenu() }>
-        <RiMenuFoldLine className="icon-medium" />
+        <RiMenu4Fill className="icon-medium" />
         </button>
       </div>
     </div>

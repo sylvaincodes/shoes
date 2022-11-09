@@ -1,12 +1,15 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { changeLanguage } from "redux-multilanguage";
+import { multilanguage } from "redux-multilanguage";
 
-export const LanguageCurrency = ({
+
+const LanguageCurrency = ({
   currentLanguageCode,
   currency,
   setCurrency,
   dispatch,
+  strings,
 }) => {
   const changeLanguageTrigger = (e) => {
     const newLanguage = e.target.value;
@@ -22,25 +25,23 @@ export const LanguageCurrency = ({
     <div className="language-currency">
       <div className="dropdown-btn language hide">
         <span className="dropdown-btn flex-row align-item-center">
-          {currentLanguageCode === "fr"
-            ? "Français"
+          { currentLanguageCode === "fr"
+            ? `${strings['french']}`
             : currentLanguageCode === "en"
-            ? "Anglais"
-            : currentLanguageCode === "es"
-            ? "Espagnol"
-            : "Français"}
+            ? `${strings['english']}`
+            : `{strings['french']}`  }
           <IoIosArrowDown />
         </span>
         <div className="dropdown-content">
           <ul>
             <li>
               <button value="fr" onClick={(e) => changeLanguageTrigger(e)}>
-                Français
+                {strings['french']}
               </button>
             </li>
             <li>
               <button value="en" onClick={(e) => changeLanguageTrigger(e)}>
-                Anglais
+              {strings['english']}
               </button>
             </li>
           </ul>
@@ -55,17 +56,17 @@ export const LanguageCurrency = ({
           <ul>
             <li>
               <button value="USD" onClick={(e) => changeCurrencyTrigger(e)}>
-                USD
+              {strings['USD']}
               </button>
             </li>
             <li>
               <button value="EUR" onClick={(e) => changeCurrencyTrigger(e)}>
-                EUR
+              {strings['EUR']}
               </button>
             </li>
             <li>
               <button value="XOF" onClick={(e) => changeCurrencyTrigger(e)}>
-                XOF
+              {strings['XOF']}
               </button>
             </li>
           </ul>
@@ -74,3 +75,5 @@ export const LanguageCurrency = ({
     </div>
   );
 };
+
+export default multilanguage(LanguageCurrency);

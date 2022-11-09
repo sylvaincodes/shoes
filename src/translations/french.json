@@ -10,5 +10,9 @@
     "english" : "Anglais",
     "EUR" : "EUR",
     "USD" : "USD",
-    "XOF" : "XOF"
+    "XOF" : "XOF",
+    "men" : "Hommes",
+    "women" : "Dames",
+    "kids" : "Enfants"
+
 }

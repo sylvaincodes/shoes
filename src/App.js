@@ -24,7 +24,7 @@ function App( props ) {
  
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<HomeOne />} />
+        <Route exact path="/" element={<HomeOne/>} />
         <Route path="collections/:category" element={<Collection/>} />
         <Route path="collections/:category" element={<Collection/>} />
       </Routes>

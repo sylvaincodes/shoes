@@ -1,51 +1,60 @@
-import React, { useState } from 'react'
-import { IconGroups } from '../../components/header/IconGroups'
-import { LanguageCurrency } from '../../components/header/LanguageCurrency'
-import { Logo } from '../../components/header/Logo'
-import { connect } from 'react-redux'
+import React, { useState } from "react";
+import { IconGroups } from "../../components/header/IconGroups";
+import LanguageCurrency from "../../components/header/LanguageCurrency";
+import { Logo } from "../../components/header/Logo";
+import { connect } from "react-redux";
 import { multilanguage } from "redux-multilanguage";
-import { setCurrency }  from '../../redux/actions/currencyActions'
-import  MobileMenu  from '../../components/header/MobileMenu'
+import { setCurrency } from "../../redux/actions/currencyActions";
+import MobileMenu from "../../components/header/MobileMenu";
 
-
-const HeaderOne = ( {currentLanguageCode ,currency,setCurrency, dispatch } ) => {
-  
-  const [isNavMobileOpen, setIsNavMobileOpen] = useState(false)
+const HeaderOne = ({
+  currentLanguageCode,
+  currency,
+  setCurrency,
+  dispatch,
+}) => {
+  const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
 
   return (
     <div className="header-one">
       <div className="container">
         <div className="wrapper">
-          
-          <LanguageCurrency  dispatch={dispatch} currentLanguageCode={currentLanguageCode} currency={currency} setCurrency={setCurrency} />
+          <LanguageCurrency
+            dispatch={dispatch}
+            currentLanguageCode={currentLanguageCode}
+            currency={currency}
+            setCurrency={setCurrency}
+          />
 
-          <Logo/>
+          <Logo />
 
-          <IconGroups setIsNavMobileOpen={setIsNavMobileOpen}/>
+          <IconGroups setIsNavMobileOpen={setIsNavMobileOpen} />
 
-          <MobileMenu  isNavMobileOpen={isNavMobileOpen} setIsNavMobileOpen={setIsNavMobileOpen}/>
-
+          <MobileMenu currentLanguageCode={currentLanguageCode}
+            isNavMobileOpen={isNavMobileOpen}
+            setIsNavMobileOpen={setIsNavMobileOpen}
+          />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    currency: state.currencyData
+    currency: state.currencyData,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrency: currencyName => {
+    setCurrency: (currencyName) => {
       dispatch(setCurrency(currencyName));
-    }
+    },
   };
 };
 
-export default  connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(multilanguage(HeaderOne));
