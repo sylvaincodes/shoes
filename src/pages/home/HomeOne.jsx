@@ -6,7 +6,7 @@ export const HomeOne = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Page d'acceuil - SHOES</title>
+        <title>Page d'acceuil - {process.env.REACT_APP_SITENAME }</title>
         <meta name="description" content="Acceuil"/>
       </Helmet>
       <LayoutOne>

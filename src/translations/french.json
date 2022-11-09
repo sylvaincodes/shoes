@@ -1,3 +1,14 @@
 {
-    "home" : "Acceuil"
+    "home" : "Acceuil",
+    "shop" : "Boutique",
+    "collections" : "Collections",
+    "stories" : "Stories",
+    "contact" : "Contact",
+    "choose_language" : "Choisir la langue",
+    "choose_currency" : "Choisir la monnaie",
+    "french" : "Français",
+    "english" : "Anglais",
+    "EUR" : "EUR",
+    "USD" : "USD",
+    "XOF" : "XOF"
 }

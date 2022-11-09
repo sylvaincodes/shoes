@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IconGroups } from '../../components/header/IconGroups'
 import { LanguageCurrency } from '../../components/header/LanguageCurrency'
 import { Logo } from '../../components/header/Logo'
 import { connect } from 'react-redux'
 import { multilanguage } from "redux-multilanguage";
 import { setCurrency }  from '../../redux/actions/currencyActions'
-import './style.css'
+import  MobileMenu  from '../../components/header/MobileMenu'
 
 
 const HeaderOne = ( {currentLanguageCode ,currency,setCurrency, dispatch } ) => {
   
-  
+  const [isNavMobileOpen, setIsNavMobileOpen] = useState(false)
+
   return (
     <div className="header-one">
       <div className="container">
@@ -20,7 +21,9 @@ const HeaderOne = ( {currentLanguageCode ,currency,setCurrency, dispatch } ) => 
 
           <Logo/>
 
-          <IconGroups/>
+          <IconGroups setIsNavMobileOpen={setIsNavMobileOpen}/>
+
+          <MobileMenu  isNavMobileOpen={isNavMobileOpen} setIsNavMobileOpen={setIsNavMobileOpen}/>
 
         </div>
       </div>

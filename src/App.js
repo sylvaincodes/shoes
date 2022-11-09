@@ -8,14 +8,13 @@ import { multilanguage, loadLanguages } from "redux-multilanguage";
 function App( props ) {
 
   useEffect(() => {
-  
+    
     // Below is to load languages, must call this once on app start,
     // and when user switch to new language that haven't loaded yet.
     props.dispatch(loadLanguages({
       languages: {
         fr: require('./translations/french.json'),
         en: require('./translations/english.json'),
-        es: require('./translations/espagnol.json')
       }
     }))
 
