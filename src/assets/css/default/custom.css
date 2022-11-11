@@ -69,7 +69,7 @@
 
 .img-holder {
     background: var(--jet-1);
-    height: 300px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -152,7 +152,7 @@ span{
 }
 
 .input-text{
-    padding-block:20px;
+    padding-block:22px;
     padding-inline: 40px;
     outline: none;
     border: none;
@@ -192,4 +192,8 @@ select{
 
 .fade{
     animation: fade .5s ease-in-out;
+}
+
+.first-letter-cap::first-letter{
+    text-transform: uppercase;
 }

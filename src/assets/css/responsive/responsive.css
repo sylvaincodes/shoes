@@ -159,6 +159,18 @@
   .header-one .mobile-menu {
     display: none;
   }
+
+  .slide-area .content{
+    position: absolute;
+    left: 10px;
+    top: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all var(--transition-3) ease;
+  }
 }
 
 /* ----------------------------

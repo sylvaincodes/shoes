@@ -1,17 +1,26 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import { LayoutOne } from '../../layouts/LayoutOne'
+import HeroSliderOne from '../../wrappers/hero-slider/HeroSliderOne'
+import { multilanguage } from 'redux-multilanguage'
 
-export const HomeOne = () => {
+const HomeOne = ({strings}) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Page d'acceuil - {process.env.REACT_APP_SITENAME }</title>
-        <meta name="description" content="Acceuil"/>
+        <title> {strings['home']} - {process.env.REACT_APP_SITENAME }</title>
+        <meta name="description" content={strings['home']}/>
       </Helmet>
       <LayoutOne>
+
             {/* Notre main ici */}
+            <HeroSliderOne/>
+
+
       </LayoutOne>
     </Fragment>
   )
 }
+
+
+export default multilanguage(HomeOne)

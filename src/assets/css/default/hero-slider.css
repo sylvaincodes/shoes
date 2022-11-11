@@ -1,0 +1,81 @@
+/* ---------------------------
+    - HERO SLIDER
+--------------------------- */
+
+.slide-area{
+   
+}
+
+.slide-area .wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-area .container{
+
+}
+
+/* item slide */
+.slide-area .slide .container{
+    
+}
+
+.slide-area .content{
+    position:absolute;
+    left:0;
+    right: 0;
+    top:215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition:all var(--transition-3) ease;
+
+}
+
+.slide-area .content :is(.title,.subtitle,.text) {
+    color: var(--white);
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 0 0 black;
+}
+
+
+.slide-area .content :is(.subtitle) {
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+}
+
+.slide-area .content :is(a) {
+    color: var(--black);
+    font-weight: var(--fw-500);
+}
+
+.slide-area .content a:hover {
+    color: var(--white);
+}
+
+.slide-area .content :is(.text) {
+    font-size: var(--fs-5);
+    font-weight: var(--fw-400);
+}
+
+.slide-area .content :is(.btn) {
+    font-size: var(--fs-5);
+    font-weight: var(--fw-300);
+    background: var(--white);
+}
+
+
+.slide-area .image-slider{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rsis-image{
+    background-position: center;
+    opacity: .8;
+}

@@ -7,10 +7,10 @@ import {
 import { TbUserCircle } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
 import { RiMenu4Fill } from "react-icons/ri";
+import { multilanguage } from "redux-multilanguage";
 
 
-export const IconGroups = ({setIsNavMobileOpen}) => {
-
+ const IconGroups = ({setIsNavMobileOpen,strings}) => {
 
   const triggerMobileMenu = (e) => {
     setIsNavMobileOpen(true);
@@ -24,14 +24,14 @@ export const IconGroups = ({setIsNavMobileOpen}) => {
           <ul>
             <li>
               <button>
-                Se connecter
+                {strings['login']}
               </button>
             </li>
             <li>
-              <button> S'inscrire </button>
+              <button> {strings['signup']} </button>
             </li>
             <li>
-              <button> Mon compte </button>
+              <button> {strings['account']} </button>
             </li>
             <li> </li>
           </ul>
@@ -65,3 +65,5 @@ export const IconGroups = ({setIsNavMobileOpen}) => {
     </div>
   );
 };
+
+ export default multilanguage(IconGroups)

@@ -13,6 +13,12 @@
     "XOF" : "XOF",
     "men" : "Hommes",
     "women" : "Dames",
-    "kids" : "Enfants"
+    "kids" : "Enfants",
+    "login" : "Se connecter",
+    "signup" : "S'inscrire",
+    "account" : "Mon compte",
+    "hurry_up" : "Allez",
+    "get_50_off" : "50% de réduction.",
+    "all_sneakers" : "sur toutes les chaussures pour l'été."
 
 }

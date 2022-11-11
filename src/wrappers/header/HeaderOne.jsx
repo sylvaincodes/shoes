@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconGroups } from "../../components/header/IconGroups";
+import  IconGroups  from "../../components/header/IconGroups";
 import LanguageCurrency from "../../components/header/LanguageCurrency";
 import { Logo } from "../../components/header/Logo";
 import { connect } from "react-redux";

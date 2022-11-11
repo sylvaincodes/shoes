@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "menu": "home",
+    "url": "/",
+    "submenu": []
+
+  },
+  {
+    "id": 2,
+    "menu": "shop",
+    "url": "/shop",
+
+    "submenu": [
+      {
+        "title": "women",
+        "url": "/collections/women"
+      },
+      {
+        "title": "men",
+        "url": "/collections/men"
+      },
+      {
+        "title": "kids",
+        "url": "/collections/kids"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "menu": "collections",
+    "url": "/",
+
+    "submenu": [
+      {
+        "title": "women",
+        "url": "/collections/women"
+      },
+      {
+        "title": "men",
+        "url": "/collections/men"
+      },
+      {
+        "title": "kids",
+        "url": "/collections/kids"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "menu": "stories",
+    "url": "/stories",
+    "submenu": []
+  },
+  {
+    "id": 5,
+    "menu": "contact",
+    "url": "/contact",
+    "submenu": []
+  }
+]

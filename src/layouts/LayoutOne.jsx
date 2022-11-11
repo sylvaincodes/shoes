@@ -3,13 +3,14 @@ import React, { Fragment } from 'react'
 import { FooterOne } from '../wrappers/footer/FooterOne'
 import  HeaderOne  from '../wrappers/header/HeaderOne.jsx'
 
-export const LayoutOne = () => {
+export const LayoutOne = ({children}) => {
   return (
     <Fragment>
         {/* <BannerTop/> */}
         <HeaderOne>
 
         </HeaderOne>
+        {children}
         <FooterOne>
 
         </FooterOne>
