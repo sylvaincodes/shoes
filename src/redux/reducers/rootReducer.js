@@ -1,5 +1,6 @@
 import { combineReducers } from "redux"
 import { createMultilanguageReducer } from 'redux-multilanguage'
+import { categoryoneReducer } from "./categoryoneReducer";
 import { currencyReducer } from "./currencyReducer";
 
 const rootReducer = combineReducers({
@@ -9,6 +10,7 @@ const rootReducer = combineReducers({
 
     //Importer les reducers ici
     currencyData: currencyReducer,
+    categoryoneData: categoryoneReducer
 
 });
 

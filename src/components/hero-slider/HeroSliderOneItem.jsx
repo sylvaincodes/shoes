@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { multilanguage } from "redux-multilanguage";
+import 'animate.css'
 
 function HeroSliderOneItem({ data, key, strings }) {
   return (

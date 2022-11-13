@@ -1,11 +1,12 @@
+// eslint-disable-next-line
 import React , { useEffect } from 'react'
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import { Collection } from "./pages/collections/Collection.jsx";
 import  HomeOne  from "./pages/home/HomeOne.jsx";
 import { connect } from 'react-redux'
-import { multilanguage, loadLanguages } from "redux-multilanguage";
+import { multilanguage, loadLanguages ,changeLanguage } from "redux-multilanguage";
 
-function App( props ) {
+const App = ( props ) => {
 
   useEffect(() => {
     
@@ -17,6 +18,8 @@ function App( props ) {
         en: require('./translations/english.json'),
       }
     }))
+
+    props.dispatch(changeLanguage(props.currentLanguageCode))
 
   })
   

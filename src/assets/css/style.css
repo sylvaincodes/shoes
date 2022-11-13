@@ -11,6 +11,9 @@ Build by Sylvain adande
 @import url("./default/custom.css");
 @import url("./default/header.css");
 @import url("./default/hero-slider.css");
+@import url("./default/banner.css");
+@import url("./default/category.css");
+@import url("./default/product.css");
 
 
 /* RESPONSIVE CSS */

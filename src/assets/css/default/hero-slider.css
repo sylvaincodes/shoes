@@ -39,6 +39,7 @@
     text-align: center;
     text-transform: capitalize;
     text-shadow: 0 0 black;
+    animation: left_to_right .5s var(--cubic-out);
 }
 
 
@@ -65,6 +66,7 @@
     font-size: var(--fs-5);
     font-weight: var(--fw-300);
     background: var(--white);
+    animation: left_to_right .5s var(--cubic-out);
 }
 
 
@@ -73,6 +75,14 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.slide-area  .content :is(.btn,a){
+    /* background: transparent;  */
+    padding-inline: 50px;
+    color: var(--black); 
+    letter-spacing: 5px;
+    font-weight: var(--fw-500);  
 }
 
 .rsis-image{

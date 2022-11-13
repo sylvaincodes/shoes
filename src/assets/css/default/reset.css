@@ -4,7 +4,7 @@
 --------------------------*/
 
 html {
-    font-family: var(--ff-gordita), var(--ff-recoleta);
+    font-family: var(--ff-recoleta),var(--ff-gordita);
     font-size: 10px;
     scroll-behavior: smooth;
   }

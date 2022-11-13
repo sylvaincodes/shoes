@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title":"find_the_perfect_gift",
+        "subtitle":"take_the_quiz",
+        "url":"/",
+        "bg_color" : "var(--first-color)"
+    }
+]

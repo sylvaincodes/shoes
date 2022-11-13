@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { multilanguage } from "redux-multilanguage";
 
-const MobileMenuNavItem = ({ data, strings }) => {
+const MobileMenuNavItem = ({ data, strings,key }) => {
   const [toggle, setToggle] = useState(null);
   const [active, setActive] = useState(null);
 
@@ -18,9 +18,9 @@ const MobileMenuNavItem = ({ data, strings }) => {
   };
 
   return (
-    <>
+
       <li
-        key={data.id}
+        key={key}
         className="menu-item"
         onClick={() => triggerSubMenu(data.id)}
       >
@@ -48,9 +48,8 @@ const MobileMenuNavItem = ({ data, strings }) => {
             <ul className="submenu-list">
               {data.submenu &&
                 data.submenu.map((submenu) => {
-                  return <>
-                    <li className="submenu-item">{strings[submenu.title]}</li>
-                  </>;
+                  return <li key={submenu.id} className="submenu-item">{strings[submenu.title]}</li>
+                  ;
                 })}
             </ul>
           </div>
@@ -58,7 +57,7 @@ const MobileMenuNavItem = ({ data, strings }) => {
           ""
         )}
       </li>
-    </>
+
   );
 };
 

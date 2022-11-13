@@ -17,8 +17,18 @@
     "login" : "Se connecter",
     "signup" : "S'inscrire",
     "account" : "Mon compte",
-    "hurry_up" : "Allez",
+    "hurry_up" : "hey fais vite",
     "get_50_off" : "50% de réduction.",
-    "all_sneakers" : "sur toutes les chaussures pour l'été."
-
+    "all_sneakers" : "sur toutes les chaussures pour l'été.",
+    "find_the_perfect_gift" : "trouvez le cadeau parfait prenez notre style pour trouver la paire parfaite.",
+    "take_the_quiz": "faire le quiz",
+    "category": "Catégories",
+    "for_every_day": "pour le quotiien",
+    "for_sport": "pour le sport",
+    "for_road": "pour la route",
+    "for_travel": "pour le voyage",
+    "for_raining": "pour la pluie",
+    "for_walk": "pour la marche",
+    "for_wall": "pour l'escalade",
+    "categories": "catégories"
 }

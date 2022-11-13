@@ -71,3 +71,16 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+/* 
+  * branda  
+*/
+@font-face {
+  font-family: 'Branda';
+  src: local('Branda'), local('Branda'),
+      url('./branda/Branda-yolq.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

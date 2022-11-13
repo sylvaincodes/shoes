@@ -9,7 +9,7 @@
         * COULEURS PRINCIPALES
     */
 
-    --first-color: #F6F6C9;
+    --first-color: #4a4a4a;
     --second-color: #FF6464;
     --third-color: #B3FFAE;
 
@@ -129,9 +129,9 @@
         *  RESPONSIVE CSS VARIABLES
     */
   
-    --ml-maxwidth : "540px";
-    --tablette-maxwidth : "740px";
-    --lm-maxwidth : "940px";
-    --ll-maxwidth : "1140px";
+    --ml-maxwidth : 540px;
+    --tablette-maxwidth : 740px;
+    --lm-maxwidth : 940px;
+    --ll-maxwidth : 1140px;
 
 }

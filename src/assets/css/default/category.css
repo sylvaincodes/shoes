@@ -1,0 +1,61 @@
+/* ---------------------
+    - FAVORY PRODUCTS
+---------------------- */
+
+.category-one{
+    padding-block: var(--padding-block-20);
+}
+
+.category-one .container{
+    overflow-x: scroll;
+}
+
+.category-one .container::-webkit-scrollbar{
+    display: none;
+}
+
+.category-one  :is(.title){
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: var(--fw-400);
+}
+
+.category-one .category-tag{
+    padding-block: var(--padding-block-20);
+}
+
+.category-one .category-tag :is(ul,li,button) {
+    width: 100%;
+    min-width: max-content;
+}
+
+.category-one .category-tag :is(button) {
+    text-transform: uppercase;
+    font-weight: var(--fw-500);
+    font-size: var(--fs-7);
+    padding-block: var(--padding-block-10);
+    padding-inline: var(--padding-inline-20);
+    color: var(--smokey-black);
+    line-height: 1.5;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--silver);
+    padding-inline:var(--padding-block-20)
+}
+
+.category-one .category-tag ul {
+    overflow-x: scroll;
+    scroll-snap-type: inline mandatory;
+    cursor: grab;
+}
+
+.category-one .category-tag li {
+    scroll-snap-align: start;
+}
+
+.category-one .category-tag button.active {
+    border-bottom: 3px solid var(--black);
+}
+
+.category-one ul::-webkit-scrollbar{
+    display: none;
+}

@@ -13,14 +13,17 @@
 
     "submenu": [
       {
+        "id": 1,
         "title": "women",
         "url": "/collections/women"
       },
       {
+        "id": 2,
         "title": "men",
         "url": "/collections/men"
       },
       {
+        "id": 3,
         "title": "kids",
         "url": "/collections/kids"
       }
@@ -33,14 +36,17 @@
 
     "submenu": [
       {
+        "id": 4,
         "title": "women",
         "url": "/collections/women"
       },
       {
+        "id": 5,
         "title": "men",
         "url": "/collections/men"
       },
       {
+        "id": 6,
         "title": "kids",
         "url": "/collections/kids"
       }
