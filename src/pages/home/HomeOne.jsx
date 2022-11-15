@@ -7,6 +7,10 @@ import bannerSlide from "../../data/banner/banner-slide.json";
 import CategoryOne from "../../wrappers/category/CategoryOne";
 import { multilanguage } from "redux-multilanguage";
 import Products from "../../wrappers/product/Products";
+import BannerTwo from "../../wrappers/banner/BannerTwo";
+import BannerActionOne from "../../wrappers/banner-action/BannerActionOne";
+import NewArrivals from "../../wrappers/product/NewArrivals";
+import Newsletter from "../../wrappers/newsletter/Newsletter";
 
 const HomeOne = (props) => {
 
@@ -29,6 +33,14 @@ const HomeOne = (props) => {
         <CategoryOne />
 
         <Products/>
+
+        <BannerTwo />
+
+        <BannerActionOne/>
+
+        <NewArrivals/>
+
+        <Newsletter/>
         
       </LayoutOne>
     </Fragment>

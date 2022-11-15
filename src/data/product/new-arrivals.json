@@ -1,0 +1,18 @@
+[
+        {
+        "id" :1,
+        "title": "women_wool_runner",
+        "description" : "limited_edition",
+        "image": "../images/arrivals/1/1.jpg"
+      },  {
+        "id" :2,
+        "title": "women_wool_dash",
+        "description" : "limited_edition",
+        "image": "../images/arrivals/2/1.jpg"
+      },  {
+        "id" :3,
+        "title": "women_wool_dweller",
+        "description" : "limited_edition",
+        "image": "../images/arrivals/3/1.jpg"
+      }
+]

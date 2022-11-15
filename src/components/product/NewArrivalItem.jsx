@@ -18,17 +18,11 @@ function ProductItem({ data,strings}) {
 
       <div className="item-content-inline">
    
-        <h6 className="item-title">{data.title}</h6>
-        <div className="product-description">
-        {strings[data.tag]}
-        </div>
+        <h6 className="item-title">{strings[data.title]}</h6>
+        <p className="text-content">
+        {strings[data.description]}
+        </p>
    
-        <div className="product-btn-actions">
-          <button className="btn-black">{strings['shop']}</button>
-        </div>
-        <button className="btn-black fly-btn">{strings['shop']}</button>
-   
-      
       </div>
    
     </div>

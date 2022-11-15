@@ -14,6 +14,9 @@ Build by Sylvain adande
 @import url("./default/banner.css");
 @import url("./default/category.css");
 @import url("./default/product.css");
+@import url("./default/banner-action.css");
+@import url("./default/newsletter.css");
+@import url("./default/footer.css");
 
 
 /* RESPONSIVE CSS */

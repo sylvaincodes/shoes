@@ -19,7 +19,9 @@ const HeroSliderOne = () => {
           loop={false}
           autoPlay={false}
           style={{ 
-            backgroundPosition:'top'
+            backgroundPosition:'top',
+            objectFit:'cover',
+            objectPosition:'left',
           }} 
         />
 

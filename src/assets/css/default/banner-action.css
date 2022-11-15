@@ -1,0 +1,22 @@
+/* -----------------
+    -   BANNER ACTION
+------------------ */
+
+.banner-action .container{
+    padding-block: var(--padding-block-20);
+    padding-inline: var(--padding-inline-30);
+}
+
+
+.banner-action .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.banner-action .btn-black{
+    width: 100%;
+}

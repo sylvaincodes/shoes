@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 // import { BannerTop } from '../wrappers/banner/BannerTop'
-import { FooterOne } from '../wrappers/footer/FooterOne'
 import  HeaderOne  from '../wrappers/header/HeaderOne.jsx'
+import   FooterOne   from '../wrappers/footer/FooterOne.jsx'
 
 export const LayoutOne = ({children}) => {
   return (
@@ -11,6 +11,7 @@ export const LayoutOne = ({children}) => {
 
         </HeaderOne>
         {children}
+  
         <FooterOne>
 
         </FooterOne>

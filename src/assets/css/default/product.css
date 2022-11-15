@@ -3,10 +3,11 @@
 -------------------- */
 
 .products {
+
 }
 
 .products .container {
-  
+
 }
 
 .product-description{
@@ -16,5 +17,22 @@
   align-items: center;
   gap: 20px;
   text-transform: capitalize;
-  
+}
+
+
+.item-content-inline{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.new-arrivals {
+  padding-block: var(--section-padding);
+}
+
+
+.new-arrivals .container .item-title{
+
 }

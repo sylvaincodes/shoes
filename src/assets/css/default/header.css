@@ -31,22 +31,22 @@
 }
 
 .header-one .icon-group .icon {
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   position: relative;
   margin-inline-end: 15px;
 }
 
 .header-one .icon-group .fly-number {
-  font-size: var(--fs-8);
+  font-size: var(--fs-7);
   background: var(--jet-3);
   position: absolute;
   text-align: center;
   color: var(--white);
   border-radius: var(--radius-circle);
-  height: 15px;
-  width: 15px;
-  top: -5px;
-  right: -8px;
+  height: 20px;
+  width: 20px;
+  top: -2px;
+  right: -11px;
 }
 
 .header-one .logo a{

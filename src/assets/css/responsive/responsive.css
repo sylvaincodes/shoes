@@ -12,7 +12,7 @@
     max-width: inherit;
     margin-inline: auto;
   }
-  .category-tag .container{
+  .category-tag .container {
     max-width: inherit;
   }
 }
@@ -26,8 +26,12 @@
     margin-inline: auto;
   }
 
-  .item-inline{
+  .item-inline {
     min-width: calc(50% - 35px);
+  }
+
+  .banner-action .container {
+    width: 50%;
   }
 }
 
@@ -36,20 +40,40 @@
 --------------------------------*/
 
 @media (min-width: 992px) {
-
-  .container{
+  .container {
     max-width: inherit;
     margin-inline: auto;
   }
 
-  .category-one .container{
+  .category-one .container {
     max-width: var(--lm-maxwidth);
   }
 
-  .item-inline{
+  .item-inline {
     min-width: calc(33% - 25px);
   }
 
+  .item-inline:hover .fly-btn {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  .item-inline .fly-btn:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .item-inline:hover img {
+    opacity: 0.5;
+  }
+
+  .item-inline .fly-btn:hover img {
+    opacity: 0.5;
+  }
+
+  .product-btn-actions {
+    display: none;
+  }
 
   :root {
     /* 
@@ -66,8 +90,8 @@
   }
 
   .header-one .icon-group .fly-number {
-    height: 20px;
-    width: 20px;
+    /* height: 20px;
+    width: 20px; */
   }
 
   .header-one .language-currency {
@@ -178,9 +202,9 @@
     display: none;
   }
 
-  .slide-area .content{
+  .slide-area .content {
     position: absolute;
-    left: 10px;
+    left: 100px;
     top: 215px;
     display: flex;
     flex-direction: column;
@@ -190,8 +214,38 @@
     transition: all var(--transition-3) ease;
   }
 
+  .footer .footer-top .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1140px;
+    margin-inline: auto;
+  }
 
+  .footer .footer-bottom .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1140px;
+    margin-inline: auto;
+    width: min-content;
+  }
 
+  .footer-bottom :is(.text-content, .text-link) {
+    width: max-content;  }
+
+    .header-one .icon-group .fly-number {
+
+    font-size: var(--fs-7);
+    background: var(--jet-3);
+    position: absolute;
+    text-align: center;
+    color: var(--white);
+    border-radius: var(--radius-circle);
+    height: 25px;
+    width: 23px;
+    top: -4px;
+    right: -11px;
+  
+    }
 }
 
 /* ----------------------------
@@ -207,9 +261,15 @@
     display: block;
   }
 
-  .category-one .container{
+  .category-one .container {
     max-width: var(--ll-maxwidth);
     margin-inline: auto;
   }
 
+  .banner-two .container {
+    max-width: inherit;
+    margin-inline: auto;
+  }
+
+ 
 }
