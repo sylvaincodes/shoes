@@ -140,3 +140,40 @@
         transform: rotateX(0deg);
     }
   }
+
+  @keyframes rotateMenu {
+    0% {
+      transform: rotateX(-90deg)
+    }
+    70% {
+      transform: rotateX(20deg)
+    }
+    100% {
+      transform: rotateX(0deg)
+    }
+}
+
+        
+@keyframes slideDown {
+    0% { 
+      transform: translateY(-60px)
+    }
+  
+    100% {
+      transform: translateY(0)
+    }
+  }
+  
+
+  @keyframes downOut {
+     0% {
+        transform: translateZ(200px) transLateY(40px)
+    }
+    80% {
+        transform: translateZ(-10px) transLateY(0px)
+    }
+    100% {
+        transform: translateZ(0px) transLateY(0px)
+    }
+}
+

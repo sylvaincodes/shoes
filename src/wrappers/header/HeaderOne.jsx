@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import  IconGroups  from "../../components/header/IconGroups";
+import IconGroups from "../../components/header/IconGroups";
 import LanguageCurrency from "../../components/header/LanguageCurrency";
 import { Logo } from "../../components/header/Logo";
 import { connect } from "react-redux";
 import { multilanguage } from "redux-multilanguage";
 import { setCurrency } from "../../redux/actions/currencyActions";
 import MobileMenu from "../../components/header/MobileMenu";
+import DesktopMenu from "../../components/header/DesktopMenu";
 
 const HeaderOne = ({
   currentLanguageCode,
   currency,
   setCurrency,
   dispatch,
+  setSearchbar,
 }) => {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
 
@@ -26,11 +28,14 @@ const HeaderOne = ({
             setCurrency={setCurrency}
           />
 
+          <DesktopMenu/>
+
           <Logo />
 
-          <IconGroups setIsNavMobileOpen={setIsNavMobileOpen} />
+          <IconGroups setSearchbar={setSearchbar} setIsNavMobileOpen={setIsNavMobileOpen} />
 
-          <MobileMenu currentLanguageCode={currentLanguageCode}
+          <MobileMenu
+            currentLanguageCode={currentLanguageCode}
             isNavMobileOpen={isNavMobileOpen}
             setIsNavMobileOpen={setIsNavMobileOpen}
           />

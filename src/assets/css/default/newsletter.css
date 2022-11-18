@@ -11,6 +11,7 @@
 .newsletter .container{
 	padding-block: 20px;
 	padding-inline: 40px;
+	width: 100%;
 }
 
 
@@ -21,12 +22,11 @@
 	gap: 15px;
 }
 
-
 .form-container{
 	margin-block: 40px;
-
-}.form-container{
 	margin-block: 20px;
+	width: 100%;
+	max-width: 600px;
 }
 
 .form-container .input{

@@ -5,6 +5,7 @@
 .footer {
 	background: var(--jet-2);
 	margin-block-start: var(--section-padding);
+	position: relative;
 }
 
 .footer .footer-top .container {

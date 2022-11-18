@@ -11,6 +11,7 @@
     "EUR" : "EUR",
     "USD" : "USD",
     "XOF" : "XOF",
+    "menu" : "Menu",
     "men" : "Hommes",
     "women" : "Dames",
     "kids" : "Enfants",
@@ -45,5 +46,8 @@
     "subscribe_newsletter":"S'inscrire au newsletter",
     "subscribe_newsletter_content" : "Rejoignez notre liste de diffusion et soyez le premier informé des nouveaux produits en édition limitée, des innovations matérielles et de nombreuses autres mises à jour amusantes",
     "see_terms_policy":"Accéder aux conditions confidentiels",
-    "enter_email": "Entrer votre adresse email"
+    "enter_email": "Entrer votre adresse email",
+    "see_cart":"Panier",
+    "go_checkout":"Payer",
+    "total":"Total"
 }

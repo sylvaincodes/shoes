@@ -17,6 +17,13 @@
   padding: 15px;
 }
 
+.img-fluid{
+  max-width: 100px;
+  height: 119px;
+  object-fit: cover;
+}
+
+
 .btn-black {
   background-color: var(--black);
   color: var(--white);
@@ -29,6 +36,32 @@
   width: 100%;
 }
 
+.product-btn-actions{
+  width: 100%;
+}
+
+.default-btn{
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--black);
+  padding-inline: 10px;
+  text-align: center;
+  padding-block: 10px;
+}
+
+.default-btn:is(:focus-visible,:hover){
+  color: var(--white) !important;
+  background: var(--black);
+  border: 1px solid var(--black);
+}
+
+.btn-black:hover{
+  color: var(--black);
+  background: var(--white);
+  border: 2px solid var(--black);
+  transform: color;
+  transition: var(--transition-1);
+}
 .text-content{
   font-size: var(--fs-7);
   text-align: center;
@@ -242,7 +275,7 @@
 
 .show {
   display: block;
-  animatoin: show 0.5s ease;
+  animation: show 0.5s ease;
 }
 
 .hide {
@@ -262,6 +295,19 @@ span {
   padding-inline: 40px;
   outline: none;
   border: none;
+}
+
+svg{
+  cursor: pointer;
+}
+
+
+.icon:hover{
+  color:var(--second-color);
+}
+
+a:hover{
+  color:var(--second-color) !important;
 }
 
 .input-text:is(:hover, :focus-visible) {

@@ -15,8 +15,8 @@ const HeroSliderOne = () => {
           height={600}
           images={heroSliderData}
           showBullets={true}
-          showNavs={false}
-          loop={false}
+          showNavs={true}
+          loop={true}
           autoPlay={false}
           style={{ 
             backgroundPosition:'top',
