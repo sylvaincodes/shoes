@@ -1,9 +1,9 @@
 import React from "react";
 import { multilanguage } from "redux-multilanguage";
-import CategoryOneItem from "../../components/category/CategoryOneItem";
+import CategoryTitleItem from "../../components/category/CategoryTitleItem";
 import categoryOne from "../../data/category/categroy-one.json";
 
-function CategoryOne({ strings }) {
+function CategoryTitle({ strings }) {
 
  
   return (
@@ -16,7 +16,7 @@ function CategoryOne({ strings }) {
             {categoryOne &&
               categoryOne.map((item,key) => {
                 return (
-                 <CategoryOneItem data={item} key={key}  />
+                 <CategoryTitleItem data={item} key={key}  />
                 );
               })}
           </ul>
@@ -26,4 +26,4 @@ function CategoryOne({ strings }) {
   );
 }
 
-export default multilanguage(CategoryOne);
+export default multilanguage(CategoryTitle);

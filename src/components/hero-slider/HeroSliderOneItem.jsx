@@ -13,8 +13,7 @@ function HeroSliderOneItem({ data, key, strings }) {
           <h4 className="title">{`  ${strings[data.subtitle]} `}</h4>
           <p className="text first-letter-cap">{`  ${strings[data.text]} `}</p>
           <button className="btn animated">
-            <Link>
-              {" "}
+            <Link to="shop">
               {strings["shop"]}
             </Link>
           </button>

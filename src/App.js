@@ -5,6 +5,7 @@ import { Collection } from "./pages/collections/Collection.jsx";
 import  HomeOne  from "./pages/home/HomeOne.jsx";
 import { connect } from 'react-redux'
 import { multilanguage, loadLanguages ,changeLanguage } from "redux-multilanguage";
+import ShopListStandard from './pages/shop/ShopListStandard.jsx';
 
 const App = ( props ) => {
 
@@ -28,8 +29,8 @@ const App = ( props ) => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<HomeOne/>} />
-        <Route path="collections/:category" element={<Collection/>} />
-        <Route path="collections/:category" element={<Collection/>} />
+        <Route path="shop" element={ <ShopListStandard/> } />
+        <Route path="collections/:category" element={ <Collection/> } />
       </Routes>
     </BrowserRouter>
 

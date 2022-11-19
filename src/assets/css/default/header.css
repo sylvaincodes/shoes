@@ -8,8 +8,8 @@
         - HEADER ONE -
 --------------------------------*/
 .header-one {
-  position: fixed;
-  box-shadow: var(--shadow-4);
+  position: static;
+  box-shadow: var(--shadow);
   z-index: 999999;
   background: var(--white);
   width: 100%;

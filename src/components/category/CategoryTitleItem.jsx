@@ -3,7 +3,7 @@ import { multilanguage } from "redux-multilanguage";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-function CategoryOneItem({ strings, data }) {
+function CategoryTitleItem({ strings, data }) {
   const dispatch = useDispatch();
 
   const changeCategory = (e, data) => {
@@ -38,4 +38,4 @@ function CategoryOneItem({ strings, data }) {
   );
 }
 
-export default multilanguage(CategoryOneItem);
+export default multilanguage(CategoryTitleItem);

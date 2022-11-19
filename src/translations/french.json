@@ -49,5 +49,6 @@
     "enter_email": "Entrer votre adresse email",
     "see_cart":"Panier",
     "go_checkout":"Payer",
-    "total":"Total"
+    "total":"Total",
+    "shop_list":"Liste des articles"
 }

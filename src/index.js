@@ -4,11 +4,17 @@ import App from './App';
 import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-
+import  productsData from './data/products.json'
 import './assets/fonts/font.css'
 import './assets/css/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+store.dispatch({
+  type: "FETCH_PRODUCTS",
+  payload : {  products : productsData }
+});
+
 root.render(
 
     <Provider store={store}>

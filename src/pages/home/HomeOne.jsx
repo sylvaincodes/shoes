@@ -4,9 +4,9 @@ import { LayoutOne } from "../../layouts/LayoutOne";
 import HeroSliderOne from "../../wrappers/hero-slider/HeroSliderOne";
 import BannerOneItem from "../../components/banner/BannerOneItem";
 import bannerSlide from "../../data/banner/banner-slide.json";
-import CategoryOne from "../../wrappers/category/CategoryOne";
+import CategoryTitle from "../../wrappers/category/CategoryTitle";
 import { multilanguage } from "redux-multilanguage";
-import Products from "../../wrappers/product/Products";
+import CategoryProducts from "../../wrappers/product/CategoryProducts";
 import BannerTwo from "../../wrappers/banner/BannerTwo";
 import BannerActionOne from "../../wrappers/banner-action/BannerActionOne";
 import NewArrivals from "../../wrappers/product/NewArrivals";
@@ -30,9 +30,9 @@ const HomeOne = (props) => {
             return <BannerOneItem data={item} key={key} />;
           })}
 
-        <CategoryOne />
+        <CategoryTitle />
 
-        <Products/>
+        <CategoryProducts/>
 
         <BannerTwo />
 

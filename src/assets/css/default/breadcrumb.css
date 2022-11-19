@@ -1,0 +1,29 @@
+/* ----------------------
+    - BREADCRUMBS
+---------------------- */
+
+.breadcrumb-item{
+    background: var(--white_a15);
+}
+
+.breadcrumb-item .container{
+    padding-block: 40px;
+    padding-inline: 20px;
+}
+
+.breadcrumb-item .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+
+.breadcrumb-item .wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.breadcrumb-item span{
+    font-size: var(--fs-7);
+}
