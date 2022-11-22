@@ -14,7 +14,33 @@
   }
   .category-tag .container {
     max-width: inherit;
+  } 
+  
+  .shop-topbar .container {
+    max-width: 540px;
   }
+
+  .shop-products .list .product-item {
+    margin: auto;
+    box-shadow: var(--shadow-2);
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 540px;
+    height: 250px;
+  }
+
+  .shop-products .list .quick-add .title {
+    font-size: var(--fs-8);
+  }
+
+  .shop-topbar svg{
+    display: block;
+    margin-left: auto;
+    font-size: var(--fs-6);
+  }
+
 }
 
 /* ------------------------------
@@ -33,6 +59,25 @@
   .banner-action .container {
     padding-inline: 100px;
   }
+
+  .shop-products .grid .wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: 20px;
+  }
+
+  .shop-products .grid .product-item {
+    margin: auto;
+    box-shadow: var(--shadow-2);
+    width: 100%;
+    transition: var(--transition-1);
+  }
+
+  .shop-topbar .container {
+    max-width: 540px;
+  }
+
 }
 
 /* ------------------------------
@@ -178,7 +223,7 @@
   }
 
   .header-one .logo {
-    margin-inline-start: 250px;
+    margin-inline-start: 140px;
   }
 
   .mobile-menu {
@@ -327,6 +372,50 @@
     width: 300px;
     transition: var(--transition-3);
   }
+
+  /* SHOP LIST  */
+  .shop-products .grid .wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 20px;
+  }
+
+  .shop-products .grid .product-item {
+    margin: auto;
+    box-shadow: var(--shadow-2);
+    width: 100%;
+    transition: var(--transition-1);
+  }
+
+  .product-item :is(.text-content, .title, .quick-add .title) {
+    font-size: initial;
+  }
+
+  .shop-products .list .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+.shop-products .list .product-item {
+  margin: auto;
+  box-shadow: var(--shadow-2);
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 500px;
+  height: 250px;
+}
+
+.shop-topbar .container {
+  max-width: inherit;
+  padding-inline: 20px;
+}
+
+
 }
 
 /* ----------------------------
@@ -351,4 +440,14 @@
     max-width: inherit;
     margin-inline: auto;
   }
+
+  .shop-topbar .container {
+    max-width: 1140px;
+    padding-inline: 20px;
+  }
+  
+  .shop-topbar .active {
+    color: var(--second-color);
+  }
+
 }

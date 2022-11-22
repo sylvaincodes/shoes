@@ -50,5 +50,7 @@
     "see_cart":"Panier",
     "go_checkout":"Payer",
     "total":"Total",
-    "shop_list":"Liste des articles"
+    "shop_list":"Liste des articles",
+    "quick_add":"Ajouter au panier",
+    "product_detail":"Détail du produit"
 }

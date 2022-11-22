@@ -1,11 +1,11 @@
 // eslint-disable-next-line
 import React , { useEffect } from 'react'
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import { Collection } from "./pages/collections/Collection.jsx";
 import  HomeOne  from "./pages/home/HomeOne.jsx";
 import { connect } from 'react-redux'
 import { multilanguage, loadLanguages ,changeLanguage } from "redux-multilanguage";
 import ShopListStandard from './pages/shop/ShopListStandard.jsx';
+import Produit from './pages/product/Produit.jsx';
 
 const App = ( props ) => {
 
@@ -30,7 +30,7 @@ const App = ( props ) => {
       <Routes>
         <Route exact path="/" element={<HomeOne/>} />
         <Route path="shop" element={ <ShopListStandard/> } />
-        <Route path="collections/:category" element={ <Collection/> } />
+        <Route path="product/:id" element={ <Produit/> } />
       </Routes>
     </BrowserRouter>
 

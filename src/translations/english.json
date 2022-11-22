@@ -46,5 +46,7 @@
     "see_cart":"VIEW CART",
     "go_checkout":"CHECKOUT",
     "total":"Total",
-    "shop_list":"Shop list"
+    "shop_list":"Shop list",
+    "quick_add":"Quick add",
+    "product_detail":"Product Detail"
 }

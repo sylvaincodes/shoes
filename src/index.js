@@ -4,7 +4,7 @@ import App from './App';
 import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import  productsData from './data/products.json'
+import  productsData from './data/short-product.json'
 import './assets/fonts/font.css'
 import './assets/css/style.css'
 
@@ -20,6 +20,7 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
+    
 );
 
 // If you want to start measuring performance in your app, pass a function

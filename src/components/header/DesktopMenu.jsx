@@ -17,14 +17,14 @@ function DesktopMenu({strings}) {
             <ul className="menu-list">
               <li>
                 {" "}
-                <Link>{strings['home']}</Link>
+                <Link to="/" >{strings['home']}</Link>
               </li>
             </ul>
 
             <ul className="menu-list">
               <li>
                 {" "}
-                <Link>{strings['shop']}</Link>
+                <Link to="/shop" >{strings['shop']}</Link>
               </li>
             </ul>
 

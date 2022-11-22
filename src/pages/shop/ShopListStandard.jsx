@@ -6,11 +6,11 @@ import BreadcrumbsItem from "../../components/breadcrumbs/BreadcrumbsItem";
 import { LayoutOne } from "../../layouts/LayoutOne";
 import ShopProducts from "../../wrappers/product/ShopProducts";
 import { useSelector } from "react-redux";
-import Paginator from "react-hooks-paginator";
 import ReactPaginate from "react-paginate";
+import ShopTopbar from "../../components/shop/ShopTopbar";
 
 const ShopListStandard = ({ location, strings }) => {
-  const pageLimit = 15;
+  const pageLimit = 8;
   // const { pathname } = location;
 
   const [layout, setLayout] = useState("list");
@@ -20,6 +20,10 @@ const ShopListStandard = ({ location, strings }) => {
 
   const products = useSelector((state) => state.productData.products);
   const pageCount = Math.ceil(products.length / pageLimit);
+ 
+  const getLayout = layout => {
+    setLayout(layout);
+  };
 
   useEffect(() => {
     setCurrentData(products.slice(offset, offset + pageLimit));
@@ -51,9 +55,12 @@ const ShopListStandard = ({ location, strings }) => {
           subtitle={strings["shop_list"]}
         />
 
-        <ShopProducts layout={layout} products={currentData} />
+        <ShopTopbar getLayout={getLayout}  layout={layout} productCount={products.length} productshowing={currentData.length} />
+        
+        <ShopProducts layout={layout}  products={currentData} />
 
         <ReactPaginate
+          initialPage="0"
           breakLabel="..."
           nextLabel="»"
           onPageChange={handlePageClick}

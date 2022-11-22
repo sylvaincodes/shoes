@@ -232,6 +232,10 @@
   background: var(--gradient-1);
 }
 
+.active{
+  color:var(--second-color);
+}
+
 .fly-item {
   position: absolute;
   top: 0;

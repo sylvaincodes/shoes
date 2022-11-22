@@ -32,7 +32,7 @@
         },
         {
           "color": "black",
-          "image": "/assets/img/product/fashion/8.jpg",
+          "image": "../images/products/p1.jpg",
           "size": [
             {
               "name": "x",
@@ -54,7 +54,7 @@
         },
         {
           "color": "brown",
-          "image": "/assets/img/product/fashion/3.jpg",
+          "image": "../images/products/p2.jpg",
           "size": [
             {
               "name": "x",
@@ -76,7 +76,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/1.jpg",
+        "../images/products/p1.jpg",
         "/assets/img/product/fashion/3.jpg",
         "/assets/img/product/fashion/6.jpg",
         "/assets/img/product/fashion/8.jpg",
@@ -161,7 +161,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/2.jpg",
+        "../images/products/p2.jpg",
         "/assets/img/product/fashion/4.jpg",
         "/assets/img/product/fashion/5.jpg",
         "/assets/img/product/fashion/7.jpg",
@@ -248,7 +248,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/3.jpg",
+        "../images/products/p3.jpg",
         "/assets/img/product/fashion/1.jpg",
         "/assets/img/product/fashion/6.jpg",
         "/assets/img/product/fashion/8.jpg",
@@ -333,7 +333,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/4.jpg",
+        "../images/products/p4.jpg",
         "/assets/img/product/fashion/2.jpg",
         "/assets/img/product/fashion/5.jpg",
         "/assets/img/product/fashion/7.jpg",
@@ -418,7 +418,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/5.jpg",
+        "../images/products/p1.jpg",
         "/assets/img/product/fashion/2.jpg",
         "/assets/img/product/fashion/4.jpg",
         "/assets/img/product/fashion/7.jpg",
@@ -504,7 +504,7 @@
         }
       ],
       "image": [
-        "/assets/img/product/fashion/6.jpg",
+        "../images/products/p10.jpg",
         "/assets/img/product/fashion/3.jpg",
         "/assets/img/product/fashion/1.jpg",
         "/assets/img/product/fashion/8.jpg",
@@ -665,7 +665,9 @@
       ],
       "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
       "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
+    }
+    
+    ,
     {
       "id": "11",
       "sku": "asdf133",
