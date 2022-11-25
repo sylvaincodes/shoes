@@ -52,5 +52,18 @@
     "total":"Total",
     "shop_list":"Liste des articles",
     "quick_add":"Ajouter au panier",
-    "product_detail":"Détail du produit"
+    "product_detail":"Détail du produit",
+    "showings_of":"Affichage de",
+    "on":"sur",
+    "add_to_cart":"Ajouter au panier",
+    "details":"Description",
+    "select_size":"Selectionner la taille",
+    "shippings":"Livraison",
+    "most_populars":"Les plus populaires",
+    "sales":"Ventes",
+    "tag":"Tag",
+    "new":"Nouveau",
+    "select_qty":"Selectionner la quantité",
+    "select_colors":"Selectionner la couleur",
+    "cart" : "Panier"
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import IconGroups from "../../components/header/IconGroups";
 import LanguageCurrency from "../../components/header/LanguageCurrency";
 import { Logo } from "../../components/header/Logo";
@@ -16,9 +16,25 @@ const HeaderOne = ({
   setSearchbar,
 }) => {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
+  const [headerTop, setHeaderTop] = useState(0);
+
+  useEffect(() => {
+    const header = document.querySelector(".header-one");
+    setHeaderTop(header.offsetTop);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
+
 
   return (
-    <div className="header-one">
+    <div className={`header-one  ${scroll > headerTop ?  'sticky'  : '' }`}>
       <div className="container">
         <div className="wrapper">
           <LanguageCurrency

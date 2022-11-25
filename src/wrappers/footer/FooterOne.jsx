@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const FooterOne = (props) => {
   return (
-    <footer className="footer">
+    <footer className="footer" data-reveal>
       <div className="footer-top">
         <div className="container">
           <ul className="wrapper">

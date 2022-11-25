@@ -1,26 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { store } from './redux/store';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import  productsData from './data/short-product.json'
-import './assets/fonts/font.css'
-import './assets/css/style.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { store } from "./redux/store";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import productsData from "./data/short-product.json";
+import "./assets/fonts/font.css";
+import "./assets/css/style.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 store.dispatch({
   type: "FETCH_PRODUCTS",
-  payload : {  products : productsData }
+  payload: { products: productsData },
 });
 
 root.render(
-
-    <Provider store={store}>
+  <React.StrictMode>
+       <Provider store={store}>
       <App />
-    </Provider>
-    
+       </Provider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

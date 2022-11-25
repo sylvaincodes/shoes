@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { multilanguage, loadLanguages ,changeLanguage } from "redux-multilanguage";
 import ShopListStandard from './pages/shop/ShopListStandard.jsx';
 import Produit from './pages/product/Produit.jsx';
+import Cart from './pages/others/Cart.jsx';
 
 const App = ( props ) => {
 
@@ -30,6 +31,7 @@ const App = ( props ) => {
       <Routes>
         <Route exact path="/" element={<HomeOne/>} />
         <Route path="shop" element={ <ShopListStandard/> } />
+        <Route path="cart" element={ <Cart/> } />
         <Route path="product/:id" element={ <Produit/> } />
       </Routes>
     </BrowserRouter>

@@ -8,8 +8,8 @@ export const DELETE_ALL_FROM_CART = "DELETE_ALL_FROM_CART";
 // declarer les functions des actions
 
 export const addToCart = ({
-  item,
-  quantityCount,
+  product,
+  quantity,
   selectedProductColor,
   selectedProductSize,
 }) => {
@@ -17,18 +17,29 @@ export const addToCart = ({
     dispatch({
       type: ADD_TO_CART,
       payload: {
-        ...item,
-        quantity: quantityCount,
+        product : product,
+        quantity: quantity,
         selectedProductColor: selectedProductColor
           ? selectedProductColor
-          : item.selectedProductColor
-          ? item.selectedProductColor
           : null,
         selectedProductSize: selectedProductSize
           ? selectedProductSize
-          : item.selectedProductSize
-          ? item.selectedProductSize
           : null,
+      },
+    });
+  };
+};
+
+
+export const deleteFromCart = ({
+  product,
+}) => {
+  return (dispatch) => {
+    dispatch({
+      type: DELETE_FROM_CART,
+      payload: {
+        product : product
+       
       },
     });
   };

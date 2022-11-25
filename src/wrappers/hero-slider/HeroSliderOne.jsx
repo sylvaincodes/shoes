@@ -14,10 +14,10 @@ const HeroSliderOne = () => {
           width={"100%"}
           height={600}
           images={heroSliderData}
-          showBullets={true}
-          showNavs={true}
+          showBullets={false}
+          showNavs={false}
           loop={true}
-          autoPlay={false}
+          autoPlay={true}
           style={{ 
             backgroundPosition:'top',
             objectFit:'cover',

@@ -14,6 +14,11 @@
   background: var(--white);
   width: 100%;
 }
+.header-one.sticky{
+  position: fixed;
+  box-shadow: var(--shadow);
+  animation: moovFromTop .5s ease-in-out;
+}
 
 .header-one .container {
   padding-inline: var(--padding-inline-10);
@@ -46,16 +51,16 @@
 }
 
 .header-one .icon-group .fly-number {
-  font-size: var(--fs-7);
+  font-size: var(--fs-6);
   background: var(--jet-3);
   position: absolute;
   text-align: center;
   color: var(--white);
   border-radius: var(--radius-circle);
-  height: 20px;
-  width: 20px;
-  top: -2px;
-  right: -11px;
+  height: 25px;
+  width: 24px;
+  top: -5px;
+  right: -13px;
 }
 
 .header-one .logo a{
@@ -310,6 +315,8 @@
 
   .shopping-cart-content ul{
     border-bottom:1px solid var(--silver);
+    max-height: 261px;
+    overflow: auto;
   }
 
   .shopping-cart-content.active{

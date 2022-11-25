@@ -1,7 +1,9 @@
 import { FETCH_PRODUCTS } from "../actions/productActions";
+import { FETCH_PRODUCT } from "../actions/productActions";
 
 const initState = {
-    products : [] 
+    products : [] ,
+    product : {} 
 }
 
 export const productReducer = ( state = initState , action ) => {
@@ -15,6 +17,19 @@ export const productReducer = ( state = initState , action ) => {
                 
                 ...state,
                 products : productsItems
+            }
+
+        } 
+        
+        if (action.type=== FETCH_PRODUCT ) {
+            
+
+            const productItem =  action.payload.product;
+
+            return {
+                
+                ...state,
+                product : productItem
             }
 
         } 

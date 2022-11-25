@@ -12,7 +12,7 @@ function Products() {
 
 
   return (
-    <div className="products">
+    <div className="products" data-reveal>
       <div className="container">
 
         <div className={categoryoneData.categoryID === categoryoneData.category.id ? "wrapper-inline animate__animated animate__bounce" : "wrapper-inline"}>

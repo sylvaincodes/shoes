@@ -4,7 +4,7 @@ import bannerActionOneData from "../../data/banner-action/banner-action-one.json
 
 function BannerActionOne() {
   return (
-    <div className="banner-action">
+    <div className="banner-action" >
       <div className="container">
         <div className="wrapper">
           {bannerActionOneData && bannerActionOneData.map((item, key) => {

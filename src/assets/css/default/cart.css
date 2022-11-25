@@ -1,0 +1,86 @@
+/* ---------------------
+        - cart 
+        ---------------*/
+
+.cart .container {
+  max-width: 540px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.cart .wrapper {
+}
+
+.cart table {
+}
+
+.cart table thead {
+  display: none;
+}
+
+.cart table tbody  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.cart table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--silver);
+}
+
+.cart table tbody tr {
+    font-size: var(--fs-6);
+    text-align: right;
+}
+
+.cart table tbody tr td:last-child{
+    font-size: var(--fs-5);
+    text-align: center;
+}
+
+.cart table tbody tr td{
+    position: relative;
+    padding-inline: 20px;
+    padding-block: 10px;
+}
+
+.cart table tbody tr .price::before{
+    content : 'Price :';
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+}
+
+.cart table tbody tr .qty::before{
+    content : 'Qty : ';
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+
+
+}
+
+.cart table tbody tr .total::before{
+    content : 'Total : ';
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+}
+
+.cart table tbody tr img {
+  width: 100%;
+  height: auto;
+}
+
+.cart table tbody tr td:nth-child(2) {
+  border-bottom: 1px solid var(--black);
+  text-align: center;
+}
+
+.cart .shopping-cart-delete{
+    text-align: center;
+}

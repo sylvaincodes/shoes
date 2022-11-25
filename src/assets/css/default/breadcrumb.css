@@ -3,7 +3,7 @@
 ---------------------- */
 
 .breadcrumb-item{
-    background: var(--white_a15);
+    background: var(--gray);
 }
 
 .breadcrumb-item .container{
@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap:20px;
 }
 

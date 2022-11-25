@@ -41,6 +41,14 @@
     font-size: var(--fs-6);
   }
 
+  .shop-topbar .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 20px;
+}
+
+
 }
 
 /* ------------------------------
@@ -77,6 +85,25 @@
   .shop-topbar .container {
     max-width: 540px;
   }
+
+  .product-detail .container {
+  max-width: inherit;
+}
+
+  .product-detail .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .product-detail .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding-inline: 31px;
+    padding-block: 0;
+}
 
 }
 
@@ -449,5 +476,10 @@
   .shop-topbar .active {
     color: var(--second-color);
   }
+
+  .product-detail .container {
+    max-width: 1140px;
+  }
+  
 
 }

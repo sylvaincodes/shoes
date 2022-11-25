@@ -5,7 +5,7 @@ const ProductGridOne = ({ products }) => {
 
   return (
     <Fragment>
-      <div className="wrapper">
+      <div className="wrapper" data-reveal>
         {products   &&
           products.map((product) => {
 

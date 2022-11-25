@@ -3,6 +3,7 @@ import { createMultilanguageReducer } from 'redux-multilanguage'
 import { categoryoneReducer } from "./categoryoneReducer";
 import { currencyReducer } from "./currencyReducer";
 import { productReducer } from "./productReducer";
+import { cartReducer } from "./cartReducer";
 
 const rootReducer = combineReducers({
     
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     //Importer les reducers ici
     currencyData: currencyReducer,
     categoryoneData: categoryoneReducer,
-    productData : productReducer
+    productData : productReducer,
+    cartData    : cartReducer,
 
 });
 

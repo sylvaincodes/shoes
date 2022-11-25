@@ -7,7 +7,7 @@ function CategoryTitle({ strings }) {
 
  
   return (
-    <div className="category-one">
+    <div className="category-one" data-reveal>
       <h5 className="title">{strings["categories"]}</h5>
 
       <div className="category-tag">

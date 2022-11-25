@@ -10,7 +10,7 @@ function ProductItem({ data,strings}) {
 
   return (
    
-   <div className="item-inline">
+   <div className="item-inline" data-reveal="left">
    
       <div className="img-holder">
         <img src={data.image} alt="" className="cover-image" />

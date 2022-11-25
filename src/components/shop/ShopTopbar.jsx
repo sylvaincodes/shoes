@@ -1,13 +1,14 @@
 import React from "react";
 import { RiMenuFill } from "react-icons/ri";
 import { RiGridFill } from "react-icons/ri";
+import { multilanguage } from "redux-multilanguage";
 
-const ShopTopbar = ({ getLayout,layout,productshowing,productCount }) => {
+const ShopTopbar = ({ getLayout,layout,productshowing,productCount,strings }) => {
   return (
     <div className="shop-topbar">
       <div className="container">
         <div className="wrapper">
-          <p className="text-content"> Affichage de {productshowing}  sur {productCount} </p>
+          <p className="text-content"> {strings['showings_of']} {productshowing}  {strings['on']} {productCount} </p>
           
           <div className="icons">
             <RiGridFill className={`${layout=='grid' ? 'icon active' : '' }`} onClick={(e) => getLayout("grid") }/>
@@ -21,4 +22,4 @@ const ShopTopbar = ({ getLayout,layout,productshowing,productCount }) => {
   );
 };
 
-export default ShopTopbar;
+export default multilanguage(ShopTopbar);

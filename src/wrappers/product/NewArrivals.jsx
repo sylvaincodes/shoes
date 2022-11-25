@@ -11,7 +11,7 @@ function NewArrivals({strings}) {
     <div className="new-arrivals">
       <div className="container">
 
-        <h5 className="title-inline">{strings['new_arrival']}</h5>
+        <h5 className="title-inline" data-reveal>{strings['new_arrival']}</h5>
         <div className="wrapper-inline">
 
           {

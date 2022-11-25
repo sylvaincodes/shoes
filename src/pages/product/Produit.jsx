@@ -2,11 +2,23 @@ import React, { Fragment } from "react";
 import { LayoutOne } from "../../layouts/LayoutOne";
 import { multilanguage } from "redux-multilanguage";
 import { Helmet } from "react-helmet";
+import BreadcrumbsItem from "../../components/breadcrumbs/BreadcrumbsItem";
+import ProductDetailOne from "../../wrappers/product/ProductDetailOne";
+import ShopProducts from "../../wrappers/product/ShopProducts";
+// import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Produit = ({strings}) => {
+const Produit = ({ strings }) => {
+  // const location = useLocation();
+  // const idproduct =  location.pathname.split('/')[2];
+
+  const product = useSelector((state) => state.productData.product);
+  const products = useSelector((state) =>
+    state.productData.products.slice(1, 5)
+  );
+
   return (
     <Fragment>
-
       <Helmet>
         <title>
           {" "}
@@ -16,7 +28,16 @@ const Produit = ({strings}) => {
       </Helmet>
 
       <LayoutOne>
+        <BreadcrumbsItem
+          link="/shop"
+          title={strings["shop_list"]}
+          subtitle={strings["product_detail"]}
+        />
 
+        <ProductDetailOne product={product} />
+
+        <h6 className="align-center p-block-20">{strings["most_populars"]}</h6>
+        <ShopProducts layout="grid" products={products} />
       </LayoutOne>
     </Fragment>
   );

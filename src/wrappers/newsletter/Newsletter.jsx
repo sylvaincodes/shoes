@@ -3,7 +3,7 @@ import { multilanguage } from "redux-multilanguage";
 
 function Newsletter({ strings }) {
   return (
-    <div className="newsletter">
+    <div className="newsletter" data-reveal>
       <div className="container">
 
 
