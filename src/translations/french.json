@@ -65,5 +65,16 @@
     "new":"Nouveau",
     "select_qty":"Selectionner la quantité",
     "select_colors":"Selectionner la couleur",
-    "cart" : "Panier"
+    "cart" : "Panier",
+    "remove" : "Supprimer",
+    "color" : "Couleur",
+    "size" : "Taille",
+    "apply" : "Appliquer",
+    "continue_shopping" : "Contuner les achats",
+    "cart_totals" : "Résumé",
+    "subtotal" : "Sous Total",
+    "shippings" : "Livraison",
+    "tax" : "Tax",
+    "total" : "Total",
+    "checkout" : "Payer"
 }

@@ -32,6 +32,10 @@
     border: 1px solid var(--silver);
 }
 
+.cart table tbody th {
+    display: table-row-group;
+}
+
 .cart table tbody tr {
     font-size: var(--fs-6);
     text-align: right;
@@ -61,9 +65,10 @@
     left: 10px;
     font-weight: bold;
 
-
-}
-
+    
+  }
+  
+  
 .cart table tbody tr .total::before{
     content : 'Total : ';
     position: absolute;
@@ -83,4 +88,56 @@
 
 .cart .shopping-cart-delete{
     text-align: center;
+}
+
+.cart-actions{
+  padding-block: 10px;
+}
+
+.cart input{
+ 
+    line-height: 30px;
+    width: -webkit-fill-available;
+    border: 1px solid silver;
+    flex: 3;
+    text-transform: capitalize;
+    padding-inline: 10px;
+    outline: none;
+}
+
+
+.cart .btn{
+  flex: 2;
+  background: var(--first-color);
+  color: var(--white);
+  padding-block: 9px;
+}
+
+.cart-summary{
+  border: 1px solid var(--silver);
+  padding: 20px;
+}
+
+.cart-summary h6 {
+  font-size: var(--fs-6);
+  padding-block-end: 10px;
+}
+
+.cart-summary ul li{
+  border-bottom: 1px solid var(--silver);
+  padding-block: 10px;
+}
+
+.cart-summary ul li span{
+  float: right;
+}
+
+
+.cart-summary ul li:last-child{
+  font-size: var(--fs-6);
+}
+
+
+button a{
+  color: var(--white);
 }

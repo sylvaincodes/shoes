@@ -62,5 +62,17 @@
     "new":"New",
     "select_qty":"Select qty",
     "select_colors":"Select colors",
-    "cart" : "Cart"
+    "cart" : "Cart",
+    "remove" : "delete",
+    "color" : "color",
+    "size" : "size",
+    "apply" : "apply",
+    "continue_shopping" : "continue_shopping",
+    "cart_totals" : "cart_totals",
+    "subtotal" : "subtotal",
+    "shippings" : "shippings",
+    "tax" : "tax",
+    "total" : "total",
+    "checkout" : "checkout"
+
 }
