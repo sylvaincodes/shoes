@@ -73,6 +73,14 @@
     "shippings" : "shippings",
     "tax" : "tax",
     "total" : "total",
-    "checkout" : "checkout"
-
+    "checkout" : "checkout",
+    "race" : "Race",
+    "bike" : "Bike",
+    "family" : "Family",
+    "mountain" : "Mountain",
+    "picknic" : "Pick nic",
+    "shower" : "Shower",
+    "sport" : "Sport",
+    "travel" : "Travel",
+    "work" : "Work"
 }

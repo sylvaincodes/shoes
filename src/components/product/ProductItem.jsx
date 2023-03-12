@@ -2,6 +2,7 @@
 // import { faCloudRain } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
 import { multilanguage } from "redux-multilanguage";
+import { ASSET_URL , CATEGRIE_FOLDER } from "../../helpers";
 
 function ProductItem({ data,strings}) {
 
@@ -11,12 +12,12 @@ function ProductItem({ data,strings}) {
    <div className="item-inline" >
    
       <div className="img-holder">
-        <img src={data.image} alt="" className="cover-image" />
+        <img src={ data.image_url ? data.image_url : ASSET_URL+CATEGRIE_FOLDER+data.image} alt="" className="cover-image" />
       </div>
 
       <div className="item-content-inline">
    
-        <h6 className="item-title">{data.title}</h6>
+        <h6 className="item-title">{strings[data.name]}</h6>
         <div className="product-description">
         {strings[data.tag]}
         </div>

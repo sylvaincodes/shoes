@@ -1,11 +1,9 @@
-import React from "react";
+import React , { useEffect, useState } from "react";
 import { multilanguage } from "redux-multilanguage";
 import CategoryTitleItem from "../../components/category/CategoryTitleItem";
-import categoryOne from "../../data/category/categroy-one.json";
 
-function CategoryTitle({ strings }) {
+function CategoryTitle({ strings, categories }) {
 
- 
   return (
     <div className="category-one" data-reveal>
       <h5 className="title">{strings["categories"]}</h5>
@@ -13,10 +11,13 @@ function CategoryTitle({ strings }) {
       <div className="category-tag">
         <div className="container">
           <ul className="flex-row category-tag-menu">
-            {categoryOne &&
-              categoryOne.map((item,key) => {
+            {categories &&
+              categories.map((item,key) => {
                 return (
+                 item.is_featured==1 ?
                  <CategoryTitleItem data={item} key={key}  />
+                 : 
+                 ""
                 );
               })}
           </ul>

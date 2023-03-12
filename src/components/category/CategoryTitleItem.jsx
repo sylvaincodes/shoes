@@ -32,7 +32,7 @@ function CategoryTitleItem({ strings, data }) {
         onClick={(e) => changeCategory(e, data)}
       >
         {" "}
-        {strings[data.title]}{" "}
+        {strings[data.name]}{" "}
       </button>
     </li>
   );

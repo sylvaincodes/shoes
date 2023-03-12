@@ -9,21 +9,20 @@ const HeroSliderOne = () => {
     <div className="slide-area">
       <div className="wrapper">
        
-
-        <SimpleImageSlider
-          width={"100%"}
-          height={600}
-          images={heroSliderData}
-          showBullets={false}
-          showNavs={false}
-          loop={true}
-          autoPlay={true}
-          style={{ 
-            backgroundPosition:'top',
-            objectFit:'cover',
-            objectPosition:'left',
-          }} 
-        />
+          <SimpleImageSlider
+            width={"100%"}
+            height={600}
+            images={heroSliderData}
+            showBullets={false}
+            showNavs={false}
+            loop={true}
+            autoPlay={true}
+            style={{ 
+              backgroundPosition:'top',
+              objectFit:'cover',
+              objectPosition:'left',
+            }} 
+          />
 
             {heroSliderData &&
               heroSliderData.map((item, key) => {

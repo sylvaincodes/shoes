@@ -6,7 +6,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { RiMenuFill } from "react-icons/ri";
 import { multilanguage } from "redux-multilanguage";
 import MenuCart from "./sub-components/MenuCart";
-import { useSelector , useDispatch} from "react-redux";
+import { useSelector } from "react-redux";
 
 const IconGroups = ({ setIsNavMobileOpen, strings, setSearchbar }) => {
   const triggerMobileMenu = (e) => {
@@ -61,7 +61,7 @@ const IconGroups = ({ setIsNavMobileOpen, strings, setSearchbar }) => {
       <div className="icon cart">
         <button  className="cart-btn" onClick={handleClick}>
           <AiOutlineShoppingCart />
-          <span className={`fly-number ${productCount > 0 ? ' bg-color' : ''}`} >{productCount}</span>
+          <span className={`fly-number ${productCount > 0 ? ' bg-color' : ''}`} >{productCount ? productCount :  0}</span>
         </button>
 
         <MenuCart/>

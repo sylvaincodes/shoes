@@ -9,7 +9,6 @@ const MenuCart = ({ strings }) => {
   const total = useSelector((state) => state.cartData.total);
   const dispatch = useDispatch();
 
-
   const handleDeleteProduct = (product) =>{
     dispatch({
       type: "DELETE_FROM_CART",
@@ -20,8 +19,11 @@ const MenuCart = ({ strings }) => {
   }
 
   return (
+
+    <Fragment>
+
     <div className=" shopping-cart-content">
-      {/* <p className='text-content'> No item added </p> */}
+      <p className="text-content"> {strings["no_item"]} </p>
 
       <ul className="flex-column">
         
@@ -54,14 +56,15 @@ const MenuCart = ({ strings }) => {
                   </li>
                 );
               })
-            : "<p className='text-content'> No item added </p>"}
+            : ( <p className="text-content"> {strings["no_item"]} </p> ) 
+            }
 
         
       </ul>
       <div className="shopping-cart-total">
         <p>
           {" "}
-          {strings["total"]} : <span className="shop-total"> $ {total.toFixed(3)}</span>{" "}
+          {strings["total"]} : <span className="shop-total"> $ {total}</span>{" "}
         </p>
       </div>
 
@@ -71,6 +74,9 @@ const MenuCart = ({ strings }) => {
         <Link to="/checkout" className="default-btn"> {strings["go_checkout"]}</Link>
       </div>
     </div>
+
+    </Fragment>
+
   );
 };
 
