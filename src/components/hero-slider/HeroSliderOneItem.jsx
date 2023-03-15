@@ -11,10 +11,10 @@ function HeroSliderOneItem({ data, key, strings }) {
         <div className="content">
           <h5 className="title">{`  ${strings[data.title]} `}</h5>
           <h4 className="title">{`  ${strings[data.subtitle]} `}</h4>
-          <p className="text first-letter-cap">{`  ${strings[data.text]} `}</p>
+          <p className="text first-letter-cap">{`  ${strings[data.description]} `}</p>
           <button className="btn animated">
-            <Link to="shop">
-              {strings["shop"]}
+            <Link to={data.link}>
+              {strings[data.btn]}
             </Link>
           </button>
         </div>

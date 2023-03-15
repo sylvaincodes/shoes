@@ -4,6 +4,7 @@ import { categoryoneReducer } from "./categoryoneReducer";
 import { currencyReducer } from "./currencyReducer";
 import { productReducer } from "./productReducer";
 import { cartReducer } from "./cartReducer";
+import { slidesitemReducer } from "./slidesitemReducer";
 
 const rootReducer = combineReducers({
     
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     categoryoneData: categoryoneReducer,
     productData : productReducer,
     cartData    : cartReducer,
+    slidesitemData  : slidesitemReducer,
 
 });
 

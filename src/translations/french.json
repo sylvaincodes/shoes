@@ -19,6 +19,7 @@
     "signup" : "S'inscrire",
     "account" : "Mon compte",
     "hurry_up" : "hey fais vite",
+    "hurry_up_2" : "hey fais vite",
     "get_50_off" : "50% de réduction.",
     "all_sneakers" : "sur toutes les chaussures pour l'été.",
     "find_the_perfect_gift" : "Prenez notre quiz pour trouver la paire parfaite. ",
@@ -83,5 +84,7 @@
     "shower" : "Piscine",
     "sport" : "Sport",
     "travel" : "Voyage",
-    "work" : "Travail"
+    "work" : "Travail",
+    "lets_go" : "Allons-y"
+
 }

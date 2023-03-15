@@ -6,9 +6,11 @@ function BannerTwo(props) {
   return (
     <div className="banner-two" data-reveal>
       <div className="container">
-        {bannerTwo &&
-          bannerTwo.map((item, key) => {
+        {props.slidesitems &&
+          props.slidesitems.map((item, key) => {
+            if (item.key=="home-banner-two") {
             return  <BannerTwoItem data={item} key={key} /> ;
+            }
           })}
       </div>
     </div>

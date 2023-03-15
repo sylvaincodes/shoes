@@ -12,10 +12,14 @@ import BannerActionOne from "../../wrappers/banner-action/BannerActionOne";
 import NewArrivals from "../../wrappers/product/NewArrivals";
 import Newsletter from "../../wrappers/newsletter/Newsletter";
 import { API_URL } from "../../helpers";
+import { useSelector } from "react-redux";
 
 const HomeOne = (props) => {
   
   const [categories, setCategories] = useState([])
+  const { slidesitems } = useSelector( state => ({
+    slidesitems: state.slidesitemData.slidesitems
+  }));
 
   useEffect(() => {
     fetch( API_URL+ "/categories", {
@@ -27,7 +31,7 @@ const HomeOne = (props) => {
         setCategories(array);
       });
   }, []);
-
+  
   return (
     <Fragment>
       <Helmet>
@@ -39,18 +43,20 @@ const HomeOne = (props) => {
       <LayoutOne>
         <HeroSliderOne />
 
-        {bannerSlide &&
-          bannerSlide.map((item, key) => {
-            return <BannerOneItem data={item} key={key} />;
+        {slidesitems &&
+          slidesitems.slidesitems.map((item, key) => {
+            if (item.key=="home-banner-one") {
+              return <BannerOneItem data={item} key={key} />;
+            }
           })}
 
         <CategoryTitle categories={categories} />
 
         <CategoryProducts categories={categories}/>
 
-        <BannerTwo />
+        <BannerTwo slidesitems={slidesitems.slidesitems} />
 
-        <BannerActionOne/>
+        <BannerActionOne slidesitems={slidesitems.slidesitems} />
 
         <NewArrivals/>
 

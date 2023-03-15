@@ -1,11 +1,13 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCloudRain } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { multilanguage } from "redux-multilanguage";
 import { ASSET_URL , CATEGRIE_FOLDER } from "../../helpers";
 
 function ProductItem({ data,strings}) {
 
+  const navigate = useNavigate();
 
   return (
    
@@ -25,7 +27,7 @@ function ProductItem({ data,strings}) {
         <div className="product-btn-actions">
           <button className="btn-black">{strings['shop']}</button>
         </div>
-        <button className="btn-black fly-btn">{strings['shop']}</button>
+        <button className="btn-black fly-btn" onClick={ () => navigate(data.image_url) } >{strings['shop']}</button>
    
       
       </div>
