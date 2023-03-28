@@ -27,6 +27,8 @@ const HeroSliderOne = () => {
     getAllSlidesitems();
   }, []);
 
+  console.log(slidesitems);
+
   return (
     <div className="slide-area">
       <div className="wrapper">
@@ -47,8 +49,8 @@ const HeroSliderOne = () => {
           }}
         />
 
-        {heroSliderData &&
-          heroSliderData.map((item, key) => {
+        {slidesitems &&
+          slidesitems.slidesitems.map((item, key) => {
             if (item.key == "home-slideshow") {
               return <HeroSliderOneItem data={item} key={key} />;
             }

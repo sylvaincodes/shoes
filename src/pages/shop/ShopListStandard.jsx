@@ -5,12 +5,16 @@ import { multilanguage } from "redux-multilanguage";
 import BreadcrumbsItem from "../../components/breadcrumbs/BreadcrumbsItem";
 import { LayoutOne } from "../../layouts/LayoutOne";
 import ShopProducts from "../../wrappers/product/ShopProducts";
-import { useSelector } from "react-redux";
 import ReactPaginate from "react-paginate";
 import ShopTopbar from "../../components/shop/ShopTopbar";
+import { API_URL } from "../../helpers";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchSlidesItems } from "../../redux/actions/slidesitemActions";
+
 
 const ShopListStandard = ({ location, strings }) => {
   const pageLimit = 8;
+  const dispatch = useDispatch();
   // const { pathname } = location;
 
   const [layout, setLayout] = useState("list");
