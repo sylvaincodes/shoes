@@ -1,5 +1,6 @@
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 export const FETCH_PRODUCT = "FETCH_PRODUCT";   
+export const FETCH_VARIATION = "FETCH_VARIATION";   
 
 
 export const fetchProducts = (products) =>{
@@ -22,6 +23,19 @@ export const fetchProduct = (product) =>{
             dispacth({
                 type : FETCH_PRODUCT,
                 payload : { product : product }
+            });
+
+    }
+
+}
+
+export const fetchVariation = (variation) =>{
+
+    return dispacth => {
+            
+            dispacth({
+                type : FETCH_VARIATION,
+                payload : { variation : variation }
             });
 
     }

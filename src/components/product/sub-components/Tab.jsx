@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 import { multilanguage } from "redux-multilanguage";
 
-const Tab = ({ title, description, strings, salecount,category,tag }) => {
+const Tab = ({ title, description, content,strings, salecount,category,tag }) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -15,6 +15,7 @@ const Tab = ({ title, description, strings, salecount,category,tag }) => {
       <div className={`flex-column text-content ${active ? "show" : "fade"}`}>
         {" "}
         <p>{description} </p>
+        <p>{content} </p>
           {/* {salecount ? <p> <strong>{strings['sales']} : </strong> {salecount} </p> : ""} 
         <p> {  category ? <strong>{strings['category']} : </strong> : "" } {
           category ? category.map( (cat,key) =>{

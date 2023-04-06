@@ -8,7 +8,7 @@ export const DELETE_ALL_FROM_CART = "DELETE_ALL_FROM_CART";
 // declarer les functions des actions
 
 export const addToCart = ({
-  product,
+  variationProduct,
   quantity,
   selectedProductColor,
   selectedProductSize,
@@ -17,7 +17,7 @@ export const addToCart = ({
     dispatch({
       type: ADD_TO_CART,
       payload: {
-        product : product,
+        product : variationProduct,  
         quantity: quantity,
         selectedProductColor: selectedProductColor
           ? selectedProductColor

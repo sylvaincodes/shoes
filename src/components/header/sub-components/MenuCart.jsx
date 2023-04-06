@@ -34,19 +34,18 @@ const MenuCart = ({ strings }) => {
                     {" "}
                     <div className="shopping-cart-img">
                       <img
-                        src={product.variation[0].image[0]}
+                        src={product.url  }
                         alt=""
                         className="img-fluid"
                       />
                     </div>
                     <div className="shopping-cart-title">
                       <h4>{product.name}</h4>
-                      <h6>Qty: {product.qtySelected}</h6>
-                      {/* <span>$152.75</span> */}
-
+                      <h6>{strings["qty"]}: {product.qtySelected}</h6>
+                     
                       <div className="cart-item-vairation">
-                        <span>Color : {product.selectedProductColor}</span>
-                        <span>Size : {product.selectedProductSize}</span>
+                        <span>{strings["color"]} : {product.selectedProductColor}</span>
+                        <span>{strings["size"]} : {product.selectedProductSize}</span>
                       </div>
                     </div>
 

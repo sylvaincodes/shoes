@@ -56,11 +56,21 @@ img{
   width: 100%;
   padding: 15px;
   font-size: var(--fs-7);
-  margin-block: 10px;
   text-transform: uppercase;
-  font-weight: var(--fw-500);
-  width: 100%;
+  font-weight: 100;
 }
+.title{
+  font-weight: 100;
+}
+
+.m-block-20{
+  margin-block: 20px;
+} 
+
+.m-t-40{
+  margin-top: 40px;
+} 
+
 
 .product-btn-actions{
   width: 100%;

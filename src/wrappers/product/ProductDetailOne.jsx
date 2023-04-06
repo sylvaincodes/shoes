@@ -6,9 +6,14 @@ import Tab from "../../components/product/sub-components/Tab";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { useDispatch,useSelector } from "react-redux";
 import { addToCart } from "../../redux/actions/cartActions";
+import { useToasts } from "react-toast-notifications";
+
 
 const ProductDetailOne = ({ product, strings }) => {
 
+  const { addToast } = useToasts();
+
+  const variationProduct = useSelector((state) => state.productData.variation);
   const variations = useSelector((state) => state.productData.variations.filter( item  => item.product_id ==product.id ));
 
   var all_images = variations[0].url.split(";")
@@ -19,10 +24,9 @@ const ProductDetailOne = ({ product, strings }) => {
   const [imageshort, setImageshort] = useState(all_images);
   const [quantity, setQty] = useState(1);
   const [selectedProductSize, setSizeproduct] = useState("x");
-  const [stocksize, setStocksize] = useState(1);
-  const [variation, setVariation] = useState(variations[0]);
-
-
+  const [stocksize, setStocksize] = useState(100);
+  const [variation, setVariation] = useState(variationProduct);
+  
   const dispatch = useDispatch();
 
   const handleSizeActive = (e, sizedata) => {
@@ -36,9 +40,7 @@ const ProductDetailOne = ({ product, strings }) => {
     setStocksize(sizedata.stock);
   };
 
-  const [selectedProductColor, setSelectedProductColor] = useState(
-    product.variation ? product.variation[0].color : ""
-  );
+  const [selectedProductColor, setSelectedProductColor] = useState("");
 
   const changeImageLarger = (url) => {
     setImagelarger(url);
@@ -58,12 +60,21 @@ const ProductDetailOne = ({ product, strings }) => {
   }, [stocksize,quantity]);
 
   const handleCart = () => {  
+
+    if (selectedProductColor == "") {
+      addToast("Selectionner une couleur ", { appearance: "error" });
+      
+      return false;
+    }
+ console.log(variationProduct);
     dispatch( 
       addToCart({
-        product ,
+        variationProduct ,
+        // product ,
         quantity ,
         selectedProductColor, 
-        selectedProductSize 
+        selectedProductSize ,
+        addToast
         })
     )
   };
@@ -88,8 +99,8 @@ const ProductDetailOne = ({ product, strings }) => {
                     className={` ${imagelarger === url ? "active" : ""}`}
                     src={url}
                     alt="image_short"
-                    width="65px"
-                    height="65px"
+                    width="95px"
+                    height="95px"
                     onClick={() => changeImageLarger(url)}
                   />
                 );
@@ -99,10 +110,8 @@ const ProductDetailOne = ({ product, strings }) => {
 
           <div className="content" data-reveal="right">
             <div className="flex-row">
-              <h6 className="">{product.name} </h6>
-              
-                {product.new ? <span className="round-circle"> {strings["new"]}  </span> : ""}{" "}
-             
+              <h6 className="title">{product.name} </h6>             
+                {product.new ? <span className="round-circle"> {strings["new"]}  </span> : ""}{" "}            
             </div>
             <div className="product-price  d-flex gap-2">
               <span className="discount"> 
@@ -115,23 +124,27 @@ const ProductDetailOne = ({ product, strings }) => {
               <Ratings ratingValue={product.rating} />
             </div>
 
+            <div className="row">
+
             <div className="product-options">
-            <span>{strings["select_colors"]} : </span>
+            <span>{strings["select_colors"]}  </span>
             <Colors
               selectedProductColor={selectedProductColor}
               setSelectedProductColor={setSelectedProductColor}
               product={product}
               setImageshort={setImageshort}
               setImagevariation={null}
-            /></div>
-
+              variations={variations}
+              setImagelarger={setImagelarger}
+              setVariation={setVariation}
+              /></div>
             <div className="product-options">
-              <span>{strings["select_size"]} : </span>
+              <span>{strings["select_size"]}  </span>
               <ul className="size-row">
                 {/* {variations.map((single) => {
-                 console.log(single) 
+                  console.log(single) 
                   return single.color === selectedProductColor
-                    ? single.size.map((sizedata, key) => {
+                  ? single.size.map((sizedata, key) => {
                         return (
                           <li
                             onClick={(e) => handleSizeActive(e, sizedata)}
@@ -147,9 +160,10 @@ const ProductDetailOne = ({ product, strings }) => {
                 })} */}
               </ul>
             </div>
+          </div>
 
-            <div className="product-options flex-column quantity">
-              <span>{strings["select_qty"]} : </span>
+            <div className="product-options flex-row quantity">
+              {/* <span>{strings["select_qty"]} : </span> */}
               <div className="cart-plus-minus">
                 <RiArrowLeftSLine onClick={() => descreaseQty()} />
                 <input
@@ -161,11 +175,13 @@ const ProductDetailOne = ({ product, strings }) => {
                 />
                 <RiArrowRightSLine onClick={() => increaseQty()} />
               </div>
+              <button className="btn-black"  onClick={handleCart}> {strings["add_to_cart"]}</button>
             </div>
 
             <Tab
               title="details"
               description={product.description}
+              content={product.content}
               // salecount={product.saleCount}
               category={product.category}
               // tag={product.tag}
@@ -173,7 +189,7 @@ const ProductDetailOne = ({ product, strings }) => {
 
             <Tab title="shippings" description="Free" />
 
-            <button className="btn-black"  onClick={handleCart}> {strings["add_to_cart"]}</button>
+            
           </div>
         </div>
       </div>

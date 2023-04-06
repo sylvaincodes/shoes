@@ -59,13 +59,13 @@
     "on":"sur",
     "add_to_cart":"Ajouter au panier",
     "details":"Description",
-    "select_size":"Selectionner la taille",
+    "select_size":"Taille",
     "most_populars":"Les plus populaires",
     "sales":"Ventes",
     "tag":"Tag",
     "new":"Nouveau",
-    "select_qty":"Selectionner la quantité",
-    "select_colors":"Selectionner la couleur",
+    "select_qty":"Quantité",
+    "select_colors":"Couleur",
     "cart" : "Panier",
     "remove" : "Supprimer",
     "color" : "Couleur",
@@ -89,6 +89,7 @@
     "lets_go" : "Allons-y",
     "specials_offers" : "Offres spéciales",
     "best_sellers" : "Meilleures ventes",
-    "new_arrivals" : "Nouvelles arrivages"
+    "new_arrivals" : "Nouvelles arrivages",
+    "qty" : "Quantité"
 
 }

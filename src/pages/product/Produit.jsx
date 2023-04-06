@@ -36,7 +36,7 @@ const Produit = ({ strings }) => {
 
         <ProductDetailOne product={product} />
 
-        <h6 className="align-center p-block-20">{strings["most_populars"]}</h6>
+        <h3 className="align-center m-t-40">{strings["most_populars"]}</h3>
         <ShopProducts layout="grid" products={products} />
       </LayoutOne>
     </Fragment>

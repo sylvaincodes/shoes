@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const Cart = ({strings}) => {
 
+    // const variations = useSelector((state) => state.productData.variations.filter( item  => item.product_id ==product.id ));
     const products = useSelector((state) => state.cartData.products);
     const total = useSelector((state) => state.cartData.total);
     const dispatch = useDispatch();
@@ -62,7 +63,7 @@ const Cart = ({strings}) => {
                     {
                         products ? products.map( (product) =>{
                             return <tr data-reveal>
-                                <td> <img src={product.variation[0].image[0]} /> </td>
+                                {/* <td> <img src={product.variation[0].image[0]} /> </td> */}
                                 <td>
                                     <div className="flex-column">
                                         <h6>{product.name}</h6>

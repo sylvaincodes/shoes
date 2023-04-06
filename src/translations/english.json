@@ -88,5 +88,6 @@
     "lets_go" : "Let's go",
     "specials_offers" : "Offres spéciales",
     "best_sellers" : "Offres spéciales",
-    "new_arrivals" : "Nouvelles arrivages"
+    "new_arrivals" : "Nouvelles arrivages",
+    "qty" : "Quantity"
 }

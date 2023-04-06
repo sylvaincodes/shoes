@@ -1,10 +1,12 @@
 import { FETCH_PRODUCTS } from "../actions/productActions";
 import { FETCH_PRODUCT } from "../actions/productActions";
+import { FETCH_VARIATION } from "../actions/productActions";
 
 const initState = {
     products : [] ,
     variations : [] ,
-    product : {} 
+    product : {} ,
+    variation : {} 
 }
 
 export const productReducer = ( state = initState , action ) => {
@@ -33,6 +35,16 @@ export const productReducer = ( state = initState , action ) => {
                 
                 ...state,
                 product : productItem
+            }
+
+        }   
+        
+        if (action.type=== FETCH_VARIATION ) {
+            
+            const variationItem =  action.payload.variation;
+            return {                
+                ...state,
+                variation : variationItem
             }
 
         } 

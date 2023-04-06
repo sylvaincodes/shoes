@@ -20,7 +20,7 @@ export const cartReducer = (state = initialState, action) => {
     action.payload.product.qtySelected = quantity;
     action.payload.product.selectedProductColor = selectedProductColor;
     action.payload.product.selectedProductSize = selectedProductSize;
-    action.payload.product.total = ((action.payload.product.price) - ((action.payload.product.price * action.payload.product.discount)/100)) * quantity;
+    action.payload.product.total = ( action.payload.product.price_discount ?  action.payload.product.price_discount : action.payload.product.price) * quantity;
     
       const filterById =state.products.filter(product => product.id !== action.payload.product.id);
     

@@ -12,6 +12,7 @@ const ProductGridOneItem = ({ product, strings  }) => {
   
   const variations = useSelector((state) => state.productData.variations.filter( item  => item.product_id ==product.id ));
   
+  const [imageshort, setImageshort] = useState();
   const [imagevariation, setImagevariation] = useState(variations[0].url);
   const [selectedProductColor, setSelectedProductColor] = useState(variations[0]);
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ const ProductGridOneItem = ({ product, strings  }) => {
           <del className="price">$  { variations[0].price   }</del>
         </div>
 
-        <Colors product={product}  setImagevariation={setImagevariation}  setSelectedProductColor={setSelectedProductColor}  selectedProductColor={selectedProductColor} variations={variations}/>
+        <Colors setImageshort={setImageshort} product={product}  setImagevariation={setImagevariation}  setSelectedProductColor={setSelectedProductColor}  selectedProductColor={selectedProductColor} variations={variations}/>
 
         <div className="quick-add">
           <h6 className="title">{strings["quick_add"]}</h6>

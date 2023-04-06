@@ -333,9 +333,10 @@
 
 .single-shopping-cart{
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    border-bottom: 1px solid silver;
+    margin-bottom: 5px;
 }
 
 .shopping-cart-title :is(h4,h6,span){

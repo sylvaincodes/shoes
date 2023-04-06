@@ -1,6 +1,7 @@
 import React from "react";
 // import { IoIosGitCompare } from "react-icons/io";
-import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineHeart ,AiOutlineShopping } from "react-icons/ai";
+
 import { TbUserCircle } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
 import { RiMenuFill } from "react-icons/ri";
@@ -60,12 +61,11 @@ const IconGroups = ({ setIsNavMobileOpen, strings, setSearchbar }) => {
 
       <div className="icon cart">
         <button  className="cart-btn" onClick={handleClick}>
-          <AiOutlineShoppingCart />
+          <AiOutlineShopping />
           <span className={`fly-number ${productCount > 0 ? ' bg-color' : ''}`} >{productCount ? productCount :  0}</span>
         </button>
 
         <MenuCart/>
-
         
       </div>
 
