@@ -3,6 +3,7 @@ import { FETCH_PRODUCT } from "../actions/productActions";
 
 const initState = {
     products : [] ,
+    variations : [] ,
     product : {} 
 }
 
@@ -11,12 +12,14 @@ export const productReducer = ( state = initState , action ) => {
         if (action.type=== FETCH_PRODUCTS ) {
             
 
-            const productsItems =  action.payload.products;
+            const productsItems =  action.payload.data;
+            const variationsItems =  action.payload.variations;
 
             return {
                 
                 ...state,
-                products : productsItems
+                products : productsItems,
+                variations : variationsItems
             }
 
         } 

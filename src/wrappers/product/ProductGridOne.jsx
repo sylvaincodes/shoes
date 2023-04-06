@@ -8,7 +8,7 @@ const ProductGridOne = ({ products }) => {
       <div className="wrapper" data-reveal>
         {products   &&
           products.map((product) => {
-
+            
               return <ProductGridOneItem product={product} key={product.id} />;
 
           })}

@@ -13,12 +13,12 @@ function ProductItem({ data,strings}) {
    <div className="item-inline" data-reveal="left">
    
       <div className="img-holder">
-        <img src={data.image} alt="" className="cover-image" />
+        <img src={data.url} alt="" className="cover-image" />
       </div>
 
       <div className="item-content-inline">
    
-        <h6 className="item-title">{strings[data.title]}</h6>
+        <h6 className="item-title">{strings[data.name]}</h6>
         <p className="text-content">
         {strings[data.description]}
         </p>

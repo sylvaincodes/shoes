@@ -55,7 +55,7 @@
     height: 269px;
     object-fit: cover;
     aspect-ratio: 1/1;
-    transition: .5s;
+    transition: .2s;
 }
 
 .product-content{

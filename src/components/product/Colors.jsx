@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const Colors = ({product,setImagevariation,selectedProductColor,setSelectedProductColor,setImageshort}) => {
+const Colors = ({product,setImagevariation,selectedProductColor,setSelectedProductColor,setImageshort , variations}) => {
 
 
   const handleImageColor = (e, id, image) => {
     const color = e.target.value;
 
     if (setImagevariation) {
-      setImagevariation(image[0]);
+      setImagevariation(image);
     }
     setSelectedProductColor(color);
     setImageshort(image);
@@ -20,17 +20,16 @@ const Colors = ({product,setImagevariation,selectedProductColor,setSelectedProdu
     e.target.labels[0].classList.add("active");
   };
 
-
   return (
     <div className="product-colors">
-          {product.variation &&
-            product.variation.map((row, key) => {
+          {variations &&
+            variations.map((row, key) => {
               return (
                 <label
                   key={key}
-                  style={{ backgroundColor: row.color }}
+                  style={{ backgroundColor: row.valeur }}
                   className={
-                    row.color === selectedProductColor
+                    row.valeur === selectedProductColor
                       ? `label-${product.id} active`
                       : `label-${product.id}`
                   }
@@ -38,10 +37,10 @@ const Colors = ({product,setImagevariation,selectedProductColor,setSelectedProdu
                   <input
                     type="radio"
                     name="product-color"
-                    value={row.color}
-                    onChange={(e) => handleImageColor(e, product.id, row.image)}
+                    value={row.valeur}
+                    onChange={(e) => handleImageColor(e, product.id, row.url)}
                     checked={
-                      row.color === selectedProductColor ? "checked" : ""
+                      row.valeur === selectedProductColor ? "checked" : ""
                     }
                   />
                   <span className="checkmark"></span>

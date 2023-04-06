@@ -432,3 +432,11 @@ select {
 	border: none;
 	border: 1px solid var(--black);
 }
+
+.d-flex{
+  display:flex;
+}
+
+.gap-2{
+  gap:10px
+}

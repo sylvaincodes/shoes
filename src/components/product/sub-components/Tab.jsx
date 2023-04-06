@@ -15,7 +15,7 @@ const Tab = ({ title, description, strings, salecount,category,tag }) => {
       <div className={`flex-column text-content ${active ? "show" : "fade"}`}>
         {" "}
         <p>{description} </p>
-          {salecount ? <p> <strong>{strings['sales']} : </strong> {salecount} </p> : ""} 
+          {/* {salecount ? <p> <strong>{strings['sales']} : </strong> {salecount} </p> : ""} 
         <p> {  category ? <strong>{strings['category']} : </strong> : "" } {
           category ? category.map( (cat,key) =>{
             return <span key={key} className="categroy-product"> {cat} </span>
@@ -26,7 +26,7 @@ const Tab = ({ title, description, strings, salecount,category,tag }) => {
           tag ? tag.map( (tagitem,key) =>{
             return <span key={key} className="categroy-product"> {tagitem} </span>
           }) : ""
-        }   </p>
+        }   </p> */}
       </div>
     </div>
   );

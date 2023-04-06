@@ -7,24 +7,21 @@ import { LayoutOne } from "../../layouts/LayoutOne";
 import ShopProducts from "../../wrappers/product/ShopProducts";
 import ReactPaginate from "react-paginate";
 import ShopTopbar from "../../components/shop/ShopTopbar";
-import { API_URL } from "../../helpers";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchSlidesItems } from "../../redux/actions/slidesitemActions";
 
 
 const ShopListStandard = ({ location, strings }) => {
   const pageLimit = 8;
   const dispatch = useDispatch();
   // const { pathname } = location;
-
   const [layout, setLayout] = useState("list");
   const [currentData, setCurrentData] = useState([]);
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-
+  
   const products = useSelector((state) => state.productData.products);
   const pageCount = Math.ceil(products.length / pageLimit);
- 
+  
   const getLayout = layout => {
     setLayout(layout);
   };
@@ -33,12 +30,13 @@ const ShopListStandard = ({ location, strings }) => {
     setCurrentData(products.slice(offset, offset + pageLimit));
   }, [products, offset]);
 
+
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * pageLimit) % products.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    // console.log(
+    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
+    // );
     setOffset(newOffset);
   };
 
@@ -59,9 +57,9 @@ const ShopListStandard = ({ location, strings }) => {
           subtitle={strings["shop_list"]}
         />
 
-        <ShopTopbar getLayout={getLayout}  layout={layout} productCount={products.length} productshowing={currentData.length} />
+        <ShopTopbar getLayout={getLayout}  layout={layout} productCount={products.length} productshowing={products.length} />
         
-        <ShopProducts layout={layout}  products={currentData} />
+        <ShopProducts layout={layout}  products={products} />
 
         <ReactPaginate
           initialPage="0"

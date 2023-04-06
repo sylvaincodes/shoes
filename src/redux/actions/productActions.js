@@ -7,7 +7,7 @@ export const fetchProducts = (products) =>{
     return dispacth => {
             dispacth({
                 type : FETCH_PRODUCTS,
-                payload : { products : products }
+                payload : { data : products.data , variations : products.variations }
             });
 
     }

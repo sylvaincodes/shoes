@@ -4,15 +4,24 @@ import Ratings from "../../components/product/Ratings";
 import { multilanguage } from "redux-multilanguage";
 import Tab from "../../components/product/sub-components/Tab";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { addToCart } from "../../redux/actions/cartActions";
 
 const ProductDetailOne = ({ product, strings }) => {
-  const [imagelarger, setImagelarger] = useState(product.variation[0].image[0]);
-  const [imageshort, setImageshort] = useState(product.variation[0].image);
+
+  const variations = useSelector((state) => state.productData.variations.filter( item  => item.product_id ==product.id ));
+
+  var all_images = variations[0].url.split(";")
+  all_images.splice(-1);
+
+  const [imagelarger, setImagelarger] = useState(variations[0].url);
+
+  const [imageshort, setImageshort] = useState(all_images);
   const [quantity, setQty] = useState(1);
   const [selectedProductSize, setSizeproduct] = useState("x");
   const [stocksize, setStocksize] = useState(1);
+  const [variation, setVariation] = useState(variations[0]);
+
 
   const dispatch = useDispatch();
 
@@ -95,9 +104,12 @@ const ProductDetailOne = ({ product, strings }) => {
                 {product.new ? <span className="round-circle"> {strings["new"]}  </span> : ""}{" "}
              
             </div>
-            <p className="discount">
-              $ {(product.price * (100 - `${product.discount}`)) / 100}
-            </p>
+            <div className="product-price  d-flex gap-2">
+              <span className="discount"> 
+              $ {variation.price_discount}
+              </span>
+              <del className="price">$  { variation.price   }</del>
+            </div>
 
             <div className="ratings">
               <Ratings ratingValue={product.rating} />
@@ -116,7 +128,8 @@ const ProductDetailOne = ({ product, strings }) => {
             <div className="product-options">
               <span>{strings["select_size"]} : </span>
               <ul className="size-row">
-                {product.variation.map((single) => {
+                {/* {variations.map((single) => {
+                 console.log(single) 
                   return single.color === selectedProductColor
                     ? single.size.map((sizedata, key) => {
                         return (
@@ -131,7 +144,7 @@ const ProductDetailOne = ({ product, strings }) => {
                         );
                       })
                     : "";
-                })}
+                })} */}
               </ul>
             </div>
 
@@ -152,10 +165,10 @@ const ProductDetailOne = ({ product, strings }) => {
 
             <Tab
               title="details"
-              description={product.shortDescription}
-              salecount={product.saleCount}
+              description={product.description}
+              // salecount={product.saleCount}
               category={product.category}
-              tag={product.tag}
+              // tag={product.tag}
             />
 
             <Tab title="shippings" description="Free" />

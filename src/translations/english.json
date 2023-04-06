@@ -20,6 +20,7 @@
     "account" : "My account",
     "hurry_up" : "Hey Hurry up !",
     "hurry_up_2" : "Hey Hurry up !",
+    "hurry_up_3" : "Hey Hurry up !",
     "get_50_off" : "get 50% off.",
     "all_sneakers" : "all sneakers products for ths summer.",
     "find_the_perfect_gift" : "find the perfect gift take our style to find the perfect pair.",
@@ -84,5 +85,8 @@
     "sport" : "Sport",
     "travel" : "Travel",
     "work" : "Work",
-    "lets_go" : "Let's go"
+    "lets_go" : "Let's go",
+    "specials_offers" : "Offres spéciales",
+    "best_sellers" : "Offres spéciales",
+    "new_arrivals" : "Nouvelles arrivages"
 }

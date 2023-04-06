@@ -1,28 +1,23 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { multilanguage } from "redux-multilanguage";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import { fetchProduct } from "../../redux/actions/productActions";
 import Colors from "./Colors";
 
 
 const ProductGridOneItem = ({ product, strings  }) => {
-  const [imagevariation, setImagevariation] = useState(product.variation[0].image[0]);
-  const [selectedProductColor, setSelectedProductColor] = useState(product.variation[0].color);
+  
+  const variations = useSelector((state) => state.productData.variations.filter( item  => item.product_id ==product.id ));
+  
+  const [imagevariation, setImagevariation] = useState(variations[0].url);
+  const [selectedProductColor, setSelectedProductColor] = useState(variations[0]);
   const dispatch = useDispatch();
 
   const handleProduct  = (product) => {
-
-    // dispatch({
-    //   type : "FETCH_PRODUCT",
-    //   payload : { product : product }
-    // })
-
      dispatch(fetchProduct(product));
-
-
   }
 
   return (
@@ -30,7 +25,7 @@ const ProductGridOneItem = ({ product, strings  }) => {
       <div className="img-holder">
         <Link onClick={()=> handleProduct(product)} to={ `/product/${product.id} `  } >
           <img
-            src={imagevariation }
+            src={imagevariation}
             alt={product.name}
           />
           {/* <p className='fly-item'>30% off with fuckig code </p> */}
@@ -39,22 +34,23 @@ const ProductGridOneItem = ({ product, strings  }) => {
 
       <div className="product-content">
         <h6 className="title">{product.name}</h6>
-        <p className="text-content"> {product.shortDescription.slice(1, 50)}</p>
+        <p className="text-content"> {product.description.slice(0, 49)}</p>
 
         <div className="product-price">
           <span className="discount"> 
-            $ {(product.price * (100 - 10)) / 100}
+          $ {variations[0].price_discount}
           </span>
-          <del className="price">$ {product.price}</del>
+          <del className="price">$  { variations[0].price   }</del>
         </div>
 
-        <Colors product={product}  setImagevariation={setImagevariation}  setSelectedProductColor={setSelectedProductColor}  selectedProductColor={selectedProductColor}/>
+        <Colors product={product}  setImagevariation={setImagevariation}  setSelectedProductColor={setSelectedProductColor}  selectedProductColor={selectedProductColor} variations={variations}/>
 
         <div className="quick-add">
           <h6 className="title">{strings["quick_add"]}</h6>
           <AiOutlinePlusSquare className="icon"/>
         </div>
       </div>
+      
     </div>
   );
 };

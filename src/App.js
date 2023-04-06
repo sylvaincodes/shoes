@@ -7,8 +7,60 @@ import { multilanguage, loadLanguages ,changeLanguage } from "redux-multilanguag
 import ShopListStandard from './pages/shop/ShopListStandard.jsx';
 import Produit from './pages/product/Produit.jsx';
 import Cart from './pages/others/Cart.jsx';
+import { useDispatch } from "react-redux";
+import { fetchCategories } from "./redux/actions/categorieActions";
+import { fetchCollections } from './redux/actions/collectionActions.js';
+import { API_URL } from './helpers/index.js';
+import { fetchSlidesItems } from './redux/actions/slidesitemActions.js';
+import { fetchProducts } from './redux/actions/productActions.js';
 
 const App = ( props ) => {
+
+const dispacth = useDispatch();
+
+useEffect(() => {
+  fetch( API_URL+ "/slidesitems", {
+    headers: {
+    },
+  })
+    .then((response) => response.json())
+    .then((array) => {
+      dispacth(fetchSlidesItems(array));
+    });
+}, []); 
+
+useEffect(() => {
+  fetch( API_URL+ "/categories", {
+    headers: {
+    },
+  })
+    .then((response) => response.json())
+    .then((array) => {
+      dispacth(fetchCategories(array));
+    });
+}, []); 
+
+useEffect(() => {
+  fetch( API_URL+ "/collections", {
+    headers: {
+    },
+  })
+    .then((response) => response.json())
+    .then((array) => {
+     dispacth(fetchCollections(array))
+    });
+}, []);
+
+useEffect(() => {
+  fetch( API_URL+ "/products", {
+    headers: {
+    },
+  })
+    .then((response) => response.json())
+    .then((array) => {
+      dispacth(fetchProducts(array));
+    });
+}, []); 
 
   useEffect(() => {
     

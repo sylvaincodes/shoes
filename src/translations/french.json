@@ -20,6 +20,7 @@
     "account" : "Mon compte",
     "hurry_up" : "hey fais vite",
     "hurry_up_2" : "hey fais vite",
+    "hurry_up_3" : "hey fais vite",
     "get_50_off" : "50% de réduction.",
     "all_sneakers" : "sur toutes les chaussures pour l'été.",
     "find_the_perfect_gift" : "Prenez notre quiz pour trouver la paire parfaite. ",
@@ -33,7 +34,7 @@
     "for_walk": "pour la marche",
     "for_wall": "pour l'escalade",
     "categories": "catégories",
-    "banner_action_one_title": "Aussi confortable. Et beaucoup plus facile à emballer.",
+    "banner_action_one_title": "Confortable et facile à emballer.",
     "banner_action_one_desc": "Des chaussures et des vêtements entièrement classés Fluff pour toute la famille ne peuvent signifier qu'une chose : il n'a jamais été aussi facile d'offrir le confort en cadeau.",
     "banner_action_one_btn": "Achetez maintenant",
     "limited_edition": "couleur édition limitée, blanc naturel",
@@ -85,6 +86,9 @@
     "sport" : "Sport",
     "travel" : "Voyage",
     "work" : "Travail",
-    "lets_go" : "Allons-y"
+    "lets_go" : "Allons-y",
+    "specials_offers" : "Offres spéciales",
+    "best_sellers" : "Meilleures ventes",
+    "new_arrivals" : "Nouvelles arrivages"
 
 }

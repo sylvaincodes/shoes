@@ -14,7 +14,7 @@ function ProductItem({ data,strings}) {
    <div className="item-inline" >
    
       <div className="img-holder">
-        <img src={ data.image_url ? data.image_url : ASSET_URL+CATEGRIE_FOLDER+data.image} alt="" className="cover-image" />
+        <img src={ data.url ? data.url : ASSET_URL+CATEGRIE_FOLDER+data.image} alt="" className="cover-image" />
       </div>
 
       <div className="item-content-inline">
@@ -27,7 +27,7 @@ function ProductItem({ data,strings}) {
         <div className="product-btn-actions">
           <button className="btn-black">{strings['shop']}</button>
         </div>
-        <button className="btn-black fly-btn" onClick={ () => navigate(data.image_url) } >{strings['shop']}</button>
+        <button className="btn-black fly-btn" onClick={ () => navigate(data.url) } >{strings['shop']}</button>
    
       
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import productsData from "./data/short-product.json";
 import "./assets/css/style.css";
@@ -8,10 +8,10 @@ import { store } from "./redux/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-store.dispatch({
-  type: "FETCH_PRODUCTS",
-  payload: { products: productsData },
-});
+// store.dispatch({
+//   type: "FETCH_PRODUCTS",
+//   payload: { products: productsData },
+// });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
