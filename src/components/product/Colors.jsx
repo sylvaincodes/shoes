@@ -3,7 +3,7 @@ import { useDispatch ,useSelector} from "react-redux";
 import { fetchVariation } from "../../redux/actions/productActions";
 
 
-const Colors = ({setVariation,product,setImagevariation,selectedProductColor,setSelectedProductColor,setImageshort , variations,setImagelarger}) => {
+const Colors = ({setSizeproduct,setVariation,product,setImagevariation,selectedProductColor,setSelectedProductColor,setImageshort , variations,setImagelarger}) => {
   
     const variationProduct = useSelector((state) => state.productData.variation);
     const dispatch = useDispatch();
@@ -21,6 +21,10 @@ const Colors = ({setVariation,product,setImagevariation,selectedProductColor,set
     
     if (setImagelarger) {
       setImagelarger(image);
+    }
+    
+    if (setSizeproduct) {
+      setSizeproduct("");
     }
     
     setSelectedProductColor(color);
@@ -46,7 +50,10 @@ const Colors = ({setVariation,product,setImagevariation,selectedProductColor,set
   return (
     <div className="product-colors">
           {variations &&
+
+            
             variations.map((row, key) => {
+              if(row.attribut=="color"){            
               return (
                 <label
                   key={key}
@@ -68,7 +75,8 @@ const Colors = ({setVariation,product,setImagevariation,selectedProductColor,set
                   />
                   <span className="checkmark"></span>
                 </label>
-              );
+              ); 
+            }
             })}
         </div>
   )

@@ -23,21 +23,21 @@ const ProductDetailOne = ({ product, strings }) => {
 
   const [imageshort, setImageshort] = useState(all_images);
   const [quantity, setQty] = useState(1);
-  const [selectedProductSize, setSizeproduct] = useState("x");
+  const [selectedProductSize, setSizeproduct] = useState("");
   const [stocksize, setStocksize] = useState(100);
-  const [variation, setVariation] = useState(variationProduct);
+  const [variation, setVariation] = useState(variationProduct ? variationProduct : variations[0]);
   
   const dispatch = useDispatch();
 
-  const handleSizeActive = (e, sizedata) => {
+  const handleSizeActive = (e, row) => {
     const size = document.querySelectorAll(".size-item");
     size.forEach((element) => {
       element.classList.remove("active");
     });
     e.target.classList.add("active");
 
-    setSizeproduct(sizedata.name);
-    setStocksize(sizedata.stock);
+    setSizeproduct(row.valeur);
+    setStocksize(100);
   };
 
   const [selectedProductColor, setSelectedProductColor] = useState("");
@@ -62,11 +62,13 @@ const ProductDetailOne = ({ product, strings }) => {
   const handleCart = () => {  
 
     if (selectedProductColor == "") {
-      addToast("Selectionner une couleur ", { appearance: "error" });
-      
+      addToast(strings["choose_color"], { appearance: "info" });
       return false;
     }
- console.log(variationProduct);
+    if ( selectedProductSize == "") {
+      addToast(strings["choose_size"], { appearance: "info" });
+      return false;
+    }
     dispatch( 
       addToCart({
         variationProduct ,
@@ -74,7 +76,8 @@ const ProductDetailOne = ({ product, strings }) => {
         quantity ,
         selectedProductColor, 
         selectedProductSize ,
-        addToast
+        addToast,
+        strings
         })
     )
   };
@@ -110,7 +113,7 @@ const ProductDetailOne = ({ product, strings }) => {
 
           <div className="content" data-reveal="right">
             <div className="flex-row">
-              <h6 className="title">{product.name} </h6>             
+              <h6 className="title text-capitalize">{product.name} </h6>             
                 {product.new ? <span className="round-circle"> {strings["new"]}  </span> : ""}{" "}            
             </div>
             <div className="product-price  d-flex gap-2">
@@ -137,27 +140,30 @@ const ProductDetailOne = ({ product, strings }) => {
               variations={variations}
               setImagelarger={setImagelarger}
               setVariation={setVariation}
+              selectedProductSize={setSizeproduct}
               /></div>
             <div className="product-options">
               <span>{strings["select_size"]}  </span>
               <ul className="size-row">
-                {/* {variations.map((single) => {
-                  console.log(single) 
-                  return single.color === selectedProductColor
-                  ? single.size.map((sizedata, key) => {
+                {variations.map((row,key) => {
+                  if(row.attribut=="size"){     
+                    if(row.id==variation.id){     
+                        // return row.color === selectedProductColor
+                        // ? single.size.map((sizedata, key) => {
                         return (
                           <li
-                            onClick={(e) => handleSizeActive(e, sizedata)}
+                            onClick={(e) => handleSizeActive(e, row)}
                             className="size-item"
                             key={key}
                           >
                             {" "}
-                            {sizedata.name}
+                            {row.valeur}
                           </li>
-                        );
-                      })
-                    : "";
-                })} */}
+                        )
+                        };
+                      };
+                    
+                })}
               </ul>
             </div>
           </div>

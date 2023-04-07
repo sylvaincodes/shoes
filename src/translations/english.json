@@ -89,5 +89,11 @@
     "specials_offers" : "Offres spéciales",
     "best_sellers" : "Offres spéciales",
     "new_arrivals" : "Nouvelles arrivages",
-    "qty" : "Quantity"
+    "qty" : "Quantity",
+    "choose_color" : "Please select a color",
+    "choose_size" : "Please select a size",
+    "product_added_to_cart" : "Produit added to cart",
+    "product_yet_added_to_cart" : "Produit already added to cart",
+    "same_products" : "Same products",
+    "product_deleted_to_cart" : "Product deleted"
 }

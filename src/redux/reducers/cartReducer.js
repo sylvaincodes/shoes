@@ -28,7 +28,9 @@ export const cartReducer = (state = initialState, action) => {
 
       
       if (state.products.filter(product => product.id === action.payload.product.id).length > 0 ) {
-      }else{
+        action.params.addToast(action.params.strings["product_yet_added_to_cart"], { appearance: "info" });
+      }else{       
+        action.params.addToast(action.params.strings["product_added_to_cart"], { appearance: "info" });
         state.total +=action.payload.product.total;
         state.productCount ++;
       }
@@ -46,6 +48,8 @@ export const cartReducer = (state = initialState, action) => {
       const cartsProducts =state.products.filter(product => product.id !== action.payload.product.id);
       state.total -=action.payload.product.total;
       state.productCount --;
+      action.params.addToast(action.params.strings["product_deleted_to_cart"], { appearance: "info" });
+
       return {
         ...state, 
         products: cartsProducts,

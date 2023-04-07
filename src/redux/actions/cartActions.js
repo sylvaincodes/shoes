@@ -12,6 +12,8 @@ export const addToCart = ({
   quantity,
   selectedProductColor,
   selectedProductSize,
+  addToast,
+  strings
 }) => {
   return (dispatch) => {
     dispatch({
@@ -25,14 +27,22 @@ export const addToCart = ({
         selectedProductSize: selectedProductSize
           ? selectedProductSize
           : null,
+        
       },
+      params : {
+        addToast : addToast,
+        strings : strings,
+      }
     });
+
   };
 };
 
 
 export const deleteFromCart = ({
   product,
+  addToast,
+  strings
 }) => {
   return (dispatch) => {
     dispatch({
@@ -41,6 +51,10 @@ export const deleteFromCart = ({
         product : product
        
       },
+      params : {
+        addToast : addToast,
+        strings : strings,
+      }
     });
   };
 };

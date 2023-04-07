@@ -17,7 +17,7 @@ const HeroSliderOne = ({slidesitems}) => {
           images={ slidesitems && slidesitems.filter((item) =>
             item.key === "home-slideshow" ? item : ""
           )}
-          showBullets={false}
+          showBullets={true}
           showNavs={false}
           loop={true}
           autoPlay={true}
@@ -26,6 +26,8 @@ const HeroSliderOne = ({slidesitems}) => {
             objectFit: "cover",
             objectPosition: "left",
           }}
+          // autoPlayDelay={2000}
+
         /> }
 
 

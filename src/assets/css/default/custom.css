@@ -450,3 +450,19 @@ select {
 .gap-2{
   gap:10px
 }
+
+.text-capitalize{
+  text-transform: capitalize;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.text-lowercase{
+  text-transform: lowercase;
+}
+
+.fw-100{
+  font-weight: 100;
+}

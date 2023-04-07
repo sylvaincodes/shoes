@@ -3,11 +3,14 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { multilanguage } from "redux-multilanguage";
 import { useSelector,useDispatch } from "react-redux";
+import { useToasts } from "react-toast-notifications";
+
 
 const MenuCart = ({ strings }) => {
   const products = useSelector((state) => state.cartData.products);
   const total = useSelector((state) => state.cartData.total);
   const dispatch = useDispatch();
+  const { addToast } = useToasts();
 
   const handleDeleteProduct = (product) =>{
     dispatch({
@@ -15,6 +18,10 @@ const MenuCart = ({ strings }) => {
       payload: {
         product : product
       },
+      params : {
+        addToast : addToast,
+        strings : strings
+      }
     });
   }
 
