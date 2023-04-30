@@ -22,7 +22,7 @@ const MobileMenu = ({
 
 
   return (
-    <div className={`mobile-menu  ${isNavMobileOpen ? "active" : "fade"} `}>
+    <div className={`mobile-menu ${isNavMobileOpen ? "active" : "fade"} `}>
       <button onClick={() => closeMobileMenu()}>
         <AiOutlineClose />
       </button>

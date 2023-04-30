@@ -51,7 +51,7 @@ html {
   }
   
   .text-link {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--black);
   }
   

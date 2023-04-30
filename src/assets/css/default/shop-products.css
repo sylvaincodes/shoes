@@ -5,23 +5,38 @@
 
 /* GRID LIST */
 
-.shop-products  .product-item {
+.shop-area .row{
+    position: relative;
+}
+.shop-products {
+  margin-block: 20px;
+  }
+  
+  .shop-products  .product-item {
   box-shadow: none !important;
   }
 
   .shop-products  .product-item:hover {
   box-shadow: var(--shadow-2) !important;
   cursor: pointer;
+  /* transition: var(--transition-1);
+  transform: scale(1.1); */
+  
   }
 
   .shop-products  .product-item:hover .quick-add{
-  visibility: visible;
-  display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-top: 1px solid var(--silver);
-    width: 100%;
+    visibility: visible;
+  }
+
+
+  .shop-products  .product-item:hover .quick-add:hover{
+    background: var(--second-color);
+    color: var(--white);
+    padding-inline: 10px;
+  }
+  
+  .shop-products  .product-item:hover .quick-add:hover :is(.title){
+    color: var(--white);
   }
 
 
@@ -29,47 +44,63 @@
     /* padding-inline: 40px; */
 }
 
-.shop-products  .wrapper{
+.shop-products .list .wrapper{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.shop-products .grid  .product-item{
+.shop-products .grid .wrapper{
     margin: auto;
-    box-shadow: var(--shadow-2);
-    width: 300px;
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-inline: 20px;
+}
+
+.shop-products .grid .product-item{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
+
 
 .shop-products  .product-item .img-holder{
     position: relative;
     width: 100%;
     height: auto;
     background:transparent;
+    align-self: center;
 }
 
 .shop-products  .product-item img{
     width: 100%;
-    height: 269px;
+    height: auto;
     object-fit: cover;
-    aspect-ratio: 1/1;
-    transition: .2s;
+    aspect-ratio: 1/1;  
+    /* transition: .2s; */
 }
 
 .product-content{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: 10px;
-    padding: 15px;
+    padding-inline: 10px;
 }
 
-.product-content :is( .title) {
+.product-content a{
+   width: 100%;
+}
+
+.product-content .title {
     text-transform: capitalize;
-    font-size: var(--fs-6);
+    font-size: var(--fs-7);
+    font-weight: bold;
 }
 
 .product-content .price{
@@ -122,9 +153,29 @@
     font-weight: var(--fw-300);
 }
 
-.quick-add{
-    
+
+.grid .quick-add{
+    visibility: hidden;
+    display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+ margin-block-start: 10px;
+}
+
+.list .product-item .quick-add-link{
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+}
+
+.list .quick-add{
  visibility: hidden;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+ margin-block-start: 10px;
 }
 
 .quick-add :is(.icon,.title){
@@ -170,38 +221,46 @@
 
 /* LIST  */
 
+.shop-wrapper{
+    flex: 1;
+}
+
+.shop-wrapper .shop-products .text-content{
+   display: none;
+}
+
+.shop-wrapper .title{
+   text-align: left;
+}
 .shop-products .list  .product-item{
     margin: auto;
     box-shadow: var(--shadow-2);
-    width: 300px;
+    width: 95%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     transition: var(--transition-1);
+    position: relative;
 }
 
-.shop-topbar .wrapper{
+/* SHOP TOPBAR */
+.shop-topbar svg{
+    display: block;
+    margin-left: auto;
+    font-size: var(--fs-6);
+  }
+
+  .shop-topbar .wrapper{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;  
     padding-block: 20px;
 }
 
 .shop-topbar .icons{
-    display: inline-flex;
+  display: flex;
+  margin-left: auto;
+  gap: 30px;
 }
-
-.shop-topbar .text-content{
-}
-
 .shop-topbar .wrapper .icon:hover{
     color: var(--second-color);
-}
-
-
-
-
-/* SHOP TOPBAR */
-.shop-topbar svg{
-   display: none;
 }

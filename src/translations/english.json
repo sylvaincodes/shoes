@@ -95,5 +95,9 @@
     "product_added_to_cart" : "Produit added to cart",
     "product_yet_added_to_cart" : "Produit already added to cart",
     "same_products" : "Same products",
-    "product_deleted_to_cart" : "Product deleted"
+    "product_deleted_to_cart" : "Product deleted",
+    "banner_top_note" : "Buy one and get More with Coupon code : BIRD15",
+    "blog" : "Blog",
+    "thanks_for_subscribe" : "Thanks for your subscribe",
+    "search" : "Search"
 }

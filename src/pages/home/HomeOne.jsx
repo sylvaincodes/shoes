@@ -2,11 +2,12 @@ import React , { useEffect, useState , Fragment } from "react";
 import { Helmet } from "react-helmet";
 import { LayoutOne } from "../../layouts/LayoutOne";
 import HeroSliderOne from "../../wrappers/hero-slider/HeroSliderOne";
-import BannerOneItem from "../../components/banner/BannerOneItem";
+import BannerOneItem from "../../components/banner/BannerTopItem";
 import CategoryTitle from "../../wrappers/category/CategoryTitle";
 import { multilanguage } from "redux-multilanguage";
 import CategoryProducts from "../../wrappers/product/CategoryProducts";
 import BannerTwo from "../../wrappers/banner/BannerTwo";
+import BannerTop from "../../wrappers/banner/BannerTop";
 import BannerActionOne from "../../wrappers/banner-action/BannerActionOne";
 import Newsletter from "../../wrappers/newsletter/Newsletter";
 import { useSelector } from "react-redux";
@@ -28,7 +29,10 @@ const HomeOne = (props) => {
         </title>
         <meta name="description" content={props.strings["home"]} />
       </Helmet>
+      
+      
       <LayoutOne>
+  
         <HeroSliderOne slidesitems={slidesitems.slidesitems} />
 
         {slidesitems &&

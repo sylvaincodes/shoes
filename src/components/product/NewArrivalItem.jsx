@@ -2,18 +2,20 @@
 // import { faCloudRain } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
 import { multilanguage } from "redux-multilanguage";
-// import { useSelector } from 'react-redux'
-
+import { useNavigate } from "react-router-dom";
+import { Link
+ } from "react-router-dom";
 function ProductItem({ data,strings}) {
 
-  // const categoryoneData = useSelector((state) => state.categoryoneData);
+  const navigate = useNavigate();
 
   return (
    
-   <div className="item-inline" data-reveal="left">
+   <div className="item-inline" data-reveal="left"  >
    
+   <Link to={'/shop?collection_slug='+data.slug}>
       <div className="img-holder">
-        <img src={data.url} alt="" className="cover-image" />
+        <img src={data.url} alt="" className="cover-image"/>
       </div>
 
       <div className="item-content-inline">
@@ -25,6 +27,7 @@ function ProductItem({ data,strings}) {
    
       </div>
    
+          </Link>
     </div>
   );
 }

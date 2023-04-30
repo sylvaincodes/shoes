@@ -53,7 +53,7 @@
     "go_checkout":"Payer",
     "total":"Total",
     "shop_list":"Liste des articles",
-    "quick_add":"Ajouter au panier",
+    "quick_add":"Commander",
     "product_detail":"Détail du produit",
     "showings_of":"Affichage de",
     "on":"sur",
@@ -96,6 +96,10 @@
     "product_added_to_cart" : "Produit ajouté au panier",
     "product_yet_added_to_cart" : "Produit déja ajouté au panier",
     "same_products" : "Produits silimaires",
-    "product_deleted_to_cart" : "Produit supprimé du panier"
-
+    "product_deleted_to_cart" : "Produit supprimé du panier",
+    "banner_top_note" : "Achetez-En Un, Obtenez-En Un À 15 % De Réduction. Utilisez Le Code : BIRD15 À La Caisse",
+    "blog" : "Blog",
+    "thanks_for_subscribe" : "Merci pour votre abonnement",
+    "search" : "Rechecher",
+    "all_categories" : "Toutes les categories"
 }

@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import BreadcrumbsItem from "../../components/breadcrumbs/BreadcrumbsItem";
 import ProductDetailOne from "../../wrappers/product/ProductDetailOne";
 import ShopProducts from "../../wrappers/product/ShopProducts";
-// import { useLocation } from "react-router-dom";
+import ScrollToTop from "../../components/sub-component/ScrollToTop";
 import { useSelector } from "react-redux";
 
 const Produit = ({ strings }) => {
@@ -28,6 +28,7 @@ const Produit = ({ strings }) => {
       </Helmet>
 
       <LayoutOne>
+        <ScrollToTop/>
         <BreadcrumbsItem
           link="/shop"
           title={strings["shop_list"]}

@@ -14,6 +14,7 @@ import { API_URL } from './helpers/index.js';
 import { fetchSlidesItems } from './redux/actions/slidesitemActions.js';
 import { fetchProducts } from './redux/actions/productActions.js';
 import { ToastProvider } from 'react-toast-notifications';
+import ScrollToTop from './components/sub-component/ScrollToTop.jsx';
 
 const App = ( props ) => {
 
@@ -80,14 +81,16 @@ useEffect(() => {
   
   return (
     
-    <ToastProvider placement='bottom-center' autoDismiss="true" transitionDuration={100}> 
+    <ToastProvider placement='bottom-left' autoDismiss="true" transitionDuration={100}> 
     <BrowserRouter>
+    <ScrollToTop>
       <Routes>
         <Route exact path="/" element={<HomeOne/>} />
         <Route path="shop" element={ <ShopListStandard/> } />
         <Route path="cart" element={ <Cart/> } />
         <Route path="product/:id" element={ <Produit/> } />
       </Routes>
+    </ScrollToTop>
     </BrowserRouter>
     </ToastProvider>
 

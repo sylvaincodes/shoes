@@ -53,10 +53,6 @@
     font-weight: var(--fw-500);
 }
 
-.slide-area .content a:hover {
-    color: var(--white);
-}
-
 .slide-area .content :is(.text) {
     font-size: var(--fs-5);
     font-weight: var(--fw-400);
@@ -67,6 +63,10 @@
     font-weight: var(--fw-300);
     background: var(--white);
     animation: left_to_right .5s var(--cubic-out);
+}
+
+.slide-area .content btn:hover > a {
+    color: var(--white) !important;
 }
 
 
@@ -83,6 +83,10 @@
     color: var(--black); 
     letter-spacing: 5px;
     font-weight: var(--fw-500);  
+}
+
+.slide-area .content button a:hover{
+    color: var(--white) !important;  
 }
 
 .rsis-image{

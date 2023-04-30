@@ -117,10 +117,10 @@ const ProductDetailOne = ({ product, strings }) => {
                 {product.new ? <span className="round-circle"> {strings["new"]}  </span> : ""}{" "}            
             </div>
             <div className="product-price  d-flex gap-2">
-              <span className="discount"> 
-              $ {variation.price_discount}
+              <span className="price"> 
+              {variation.price ? '$' + variation.price : ''}
               </span>
-              <del className="price">$  { variation.price   }</del>
+              <del className="discount"> {variation.price_discount ? '$' + variation.price_discount : ''}</del>
             </div>
 
             <div className="ratings">

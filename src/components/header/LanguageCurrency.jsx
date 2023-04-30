@@ -3,7 +3,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { changeLanguage } from "redux-multilanguage";
 import { multilanguage } from "redux-multilanguage";
 
-
 const LanguageCurrency = ({
   currentLanguageCode,
   currency,
@@ -18,7 +17,7 @@ const LanguageCurrency = ({
 
   const changeCurrencyTrigger = (e) => {
     const currencyName = e.target.value;
-    setCurrency(currencyName);
+      setCurrency(currencyName)
   };
 
   return (

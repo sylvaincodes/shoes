@@ -4,7 +4,8 @@ import ProductGridOne from './ProductGridOne'
 const ShopProducts = ({ products,layout,variations }) => {
   return (
     <div className="shop-products">
-        <div className={`container ${layout ? layout : ""} `}>
+      
+        <div className={`${layout ? layout : ""} `}>
             <ProductGridOne  products={products} />
         </div>
     </div>

@@ -8,29 +8,5 @@
 
 .banner-top .container{
     padding-block: var(--padding-block-5);
-    padding-inline: var(--padding-inline-30);
 }
 
-.banner-top .wrapper{
-    /* display: flex;
-    flex-wrap:wrap ;
-    align-items: center;
-    justify-content: center;    
-    text-align: center; */
-}
-
-.banner-top .banner-content{
-    font-size: var(--fs-8);
-}
-
-
-/* ----------------------
-    - LANGUAGE CURRENCY
-------------------------*/
-.language-currency{
-
-}
-
-.language-currency .language{
-    font-size: var(--fs-6);
-}

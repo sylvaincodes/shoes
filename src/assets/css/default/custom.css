@@ -34,7 +34,6 @@ img{
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-block: 10px;
 }
 
 .yellow{
@@ -101,7 +100,7 @@ img{
 
 .flex-column{
   display: flex;
-  flex-direction: column;
+  flex-direction: column  !important;
 }
 
 .text-content{
@@ -146,7 +145,7 @@ img{
   position: relative;
   background: var(--white);
   z-index: 100;
-  transition: 1s ease;
+  transition: 0.3s ease;
 }
 .bg-color{
   background:var(--second-color) !important;
@@ -155,13 +154,13 @@ img{
 .animated:after {
   content: "";
   position: absolute;
-  background: var(--dark-black);
+  background: var(--jet-1);
   top: 0;
   left: 50%;
   height: 100%;
   width: 0%;
   transform: translateX(-50%);
-  transition: width 1s ease;
+  transition: width 0.3s ease;
   z-index: -1;
 }
 
@@ -197,8 +196,8 @@ img{
 }
 
 .img-holder:hover img {
-  transform: scale(1.2);
-  transition: var(--transition-3);
+  /* transform: scale(1.1); */
+  transition: var(--transition-1);
   cursor: pointer;
 }
 
@@ -447,6 +446,29 @@ select {
   display:flex;
 }
 
+.align-item-center{
+  align-items: center;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.m-l-10{
+  margin-left: 10px;
+}
+
+.fs-5{
+  font-size: var(--fs-5);
+}
+
+.fs-6{
+  font-size: var(--fs-6);
+}
+
+.fs-7{
+  font-size: var(--fs-7);
+}
+
 .gap-2{
   gap:10px
 }
@@ -465,4 +487,13 @@ select {
 
 .fw-100{
   font-weight: 100;
+}
+
+.btn{
+    font-size: var(--fs-4);
+}
+
+.btn-outline svg{
+    background: white;
+    color: black;
 }

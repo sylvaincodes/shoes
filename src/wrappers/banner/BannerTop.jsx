@@ -1,26 +1,25 @@
 import React from 'react'
-import { BannerTopItem } from '../../components/banner/BannerTopItem'
-import bannerTopData from '../../data/banner/banner-top.json'
+import  BannerTopItem  from '../../components/banner/BannerTopItem'
+import { useSelector } from 'react-redux';
 import './style.css';
 
-export const BannerTop = () => {
+function BannerTop() {
 
+    const BannerTopData = useSelector((state) => state.slidesitemData.slidesitems.slidesitems.filter( item  => item.key == "banner-top" ));
     return (
         <div className="banner-top">
             <div className="container">
                 <div className="wrapper">
 
                     {
-                        bannerTopData && 
-                        bannerTopData.map((item,key) =>{
-                                return(
-                                    <BannerTopItem
-                                    data={item} 
-                                    key={key} 
-                                    />
-                                );
-                            }
-                        )
+                        BannerTopData && BannerTopData.map((item) =>
+                        {
+                            return  <BannerTopItem
+                            data={item} 
+                            key={item.id} 
+                            />
+                        })
+    
                     }
 
                 </div>
@@ -28,3 +27,5 @@ export const BannerTop = () => {
         </div>
     )
 }
+
+export default BannerTop;

@@ -3,11 +3,12 @@ import React, { useState,useEffect, Fragment } from 'react'
 import  HeaderOne  from '../wrappers/header/HeaderOne.jsx'
 import   FooterOne   from '../wrappers/footer/FooterOne.jsx'
 import SearchBar from '../components/header/SearchBar.jsx'
+import BannerTop from '../wrappers/banner/BannerTop.jsx'
 
 export const LayoutOne = ({children}) => {
 
   const [searchbar, setSearchbar] = useState(false)
-
+ 
   useEffect(() => {
     
 // SCROLL REVEALD
@@ -21,8 +22,7 @@ const scrollReveal = function () {
         }
         else{
             revealElements[index].classList.remove("revealed");
-        }
-        
+        }       
     }
 }
 window.addEventListener('scroll', scrollReveal);
@@ -36,9 +36,10 @@ scrollReveal();
 
         <SearchBar searchbar={searchbar} setSearchbar={setSearchbar}/>
 
-        <HeaderOne setSearchbar={setSearchbar}>
+        <BannerTop/>
 
-        </HeaderOne>
+        <HeaderOne setSearchbar={setSearchbar}/>
+
         {children}
   
         <FooterOne>

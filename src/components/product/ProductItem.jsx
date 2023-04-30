@@ -27,7 +27,7 @@ function ProductItem({ data,strings}) {
         <div className="product-btn-actions">
           <button className="btn-black">{strings['shop']}</button>
         </div>
-        <button className="btn-black fly-btn" onClick={ () => navigate(data.url) } >{strings['shop']}</button>
+        <button className="btn-black fly-btn" onClick={ () => navigate(data.link) } >{strings['shop']}</button>
    
       
       </div>

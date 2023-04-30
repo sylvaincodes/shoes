@@ -20,7 +20,7 @@ const HeroSliderOne = ({slidesitems}) => {
           showBullets={true}
           showNavs={false}
           loop={true}
-          autoPlay={true}
+          autoPlay={false}
           style={{
             backgroundPosition: "top",
             objectFit: "cover",

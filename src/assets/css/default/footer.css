@@ -54,8 +54,7 @@
 	font-size: var(--fs-3);
 	font-weight: var(--fw-500);
 	text-transform: uppercase;
-	text-align: center
-	;
+	text-align: center;
 	color: var(--white);
 
 }

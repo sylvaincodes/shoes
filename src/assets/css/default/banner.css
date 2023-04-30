@@ -6,11 +6,6 @@
     /* background : var(--jet-3); */
 }
 
-.banner-one .container{
-    padding-block: var(--padding-block-10);
-    padding-inline: var(--padding-inline-20);
-}
-
 .banner-one .container :is(p){
     text-align: center;
     font-size: var(--fs-6);    
